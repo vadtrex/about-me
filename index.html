@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Damian Wojtyczko</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.ico"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--
+    - #MAIN
+  -->
+
+    <main>
+      <!--
+      - #SIDEBAR
+    -->
+
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box"></figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Damian Wojtyczko">
+              Damian<br />
+              Wojtyczko
+            </h1>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Pokaż dane kontaktowe</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+
+                <a
+                  href="mailto:damianwojtyczko@gmail.com"
+                  class="contact-link"
+                  title="damianwojtyczko@gmail.com"
+                  >damianwojtyczko@gmail.com</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Lokalizacja</p>
+
+                <address>Pobiedziska, Polska</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                href="https://github.com/vadtrex"
+                class="social-link"
+                target="_blank"
+              >
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      - #main-content
+    -->
+
+      <div class="main-content">
+        <!--
+        - #NAVBAR
+      -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>O mnie</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Projekty</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Artykuły</button>
+            </li>
+          </ul>
+        </nav>
+
+        <!--
+        - #ABOUT
+      -->
+
+        <article class="about active" data-page="o mnie">
+          <header>
+            <h2 class="h2 article-title">O mnie</h2>
+          </header>
+
+          <section class="about-text">
+            <p>
+              Jestem pasjonatem technologii z praktycznym doświadczeniem w
+              branży IT i silnym zapleczem technicznym. Studiuję informatykę na
+              Uniwersytecie im. Adama Mickiewicza w Poznaniu, gdzie rozwijam
+              swoje kompetencje programistyczne oraz znajomość nowoczesnych
+              technologii. W Fundacji MEETin pełniłem funkcję Specjalisty ds. IT
+              i odpowiadałem za prowadzenie projektów zespołowych oraz
+              utrzymanie systemów informatycznych. Pracując z zespołem, zdobyłem
+              umiejętności efektywnej współpracy i organizacji pracy.
+              <br />
+              <br />
+              Posiadam doświadczenie w programowaniu (Python, C++, React i React
+              Native), obsłudze baz danych (SQL Server i Firebase) oraz pracy z
+              chmurą (Google Cloud). Swobodnie poruszam się w środowiskach
+              Windows i Linux oraz dobrze znam narzędzia do kontroli wersji, co
+              pozwala mi efektywnie realizować zadania i szybko dostosowywać się
+              do nowych zadań. Jestem osobą zorganizowaną, skrupulatną i
+              nastawioną na analityczne podejście do rozwiązywania problemów,
+              samodzielność i szybkie przyswajanie nowych technologii.
+              <br />
+              Dążę do ciągłego rozwoju w obszarze IT, angażując się w projekty
+              wymagające innowacyjności i elastyczności.
+            </p>
+          </section>
+
+          <!--
+          - hlprojects
+        -->
+
+          <section class="hlprojects">
+            <h3 class="h3 hlprojects-title">Wyróżnione projekty</h3>
+
+            <ul class="hlprojects-list has-scrollbar">
+              <li class="hlprojects-item">
+                <div
+                  class="content-card"
+                  data-hlprojects-item
+                  data-video-url="./assets/videos/wiatry_swiata.mp4"
+                  data-github-url="https://github.com/vadtrex/Projekt_GRK"
+                >
+                  <figure class="hlprojects-icon-box">
+                    <img
+                      src="./assets/images/wiatry_swiata.png"
+                      alt="Wiatry Świata"
+                      width="60"
+                      data-hlprojects-icon
+                    />
+                  </figure>
+
+                  <h4 class="h4 hlprojects-item-title" data-hlprojects-title>
+                    Wiatry Świata
+                  </h4>
+                  <div class="hlprojects-text" data-hlprojects-text>
+                    <p>
+                      Aplikacja oparta jest na bibliotece graficznej
+                      <strong>OpenGL</strong> i umożliwia interaktywną
+                      wizualizację globalnych wzorców wiatru na trójwymiarowym
+                      modelu kuli ziemskiej. Projekt prezentuje dane
+                      meteorologiczne w przystępny sposób, wykorzystując przy
+                      tym wiele technik grafiki komputerowej. Aplikacja pozwala
+                      na odczyt kierunków i prędkości wiatrów na całym świecie
+                      na podstawie historycznych danych, korzystając z
+                      <strong>API NOMADS</strong>
+                      (https://nomads.ncep.noaa.gov/) dostarczonego przez
+                      National Oceanic and Atmospheric Administration.
+                      <br />
+                      <br />
+
+                      Dzięki prostemu interfejsowi wraz z samouczkiem oraz
+                      graficznym elementom, takim jak animowane linie wiatru
+                      oraz strzałki z dominującymi kierunkami wiatru, aplikacja
+                      pozwala w łatwy sposób analizować i interpretować zjawiska
+                      atmosferyczne.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="hlprojects-item">
+                <div
+                  class="content-card"
+                  data-hlprojects-item
+                  data-video-url="./assets/videos/meetin.mp4"
+                  data-github-url=""
+                >
+                  <figure class="hlprojects-icon-box">
+                    <img
+                      src="./assets/images/meetin.png"
+                      alt="Aplikacja MEETin"
+                      width="60"
+                      data-hlprojects-icon
+                    />
+                  </figure>
+
+                  <h4 class="h4 hlprojects-item-title" data-hlprojects-title>
+                    Aplikacja MEETin
+                  </h4>
+                  <div class="hlprojects-text" data-hlprojects-text>
+                    <p>
+                      <strong>MEETin</strong> to aplikacja mobilna na Android i
+                      iOS stworzona w <strong>React Native</strong>, która
+                      ułatwia znajdowanie miejsc spotkań z przyjaciółmi na
+                      podstawie preferencji użytkownika. Wykorzystuje
+                      <strong>Google Maps API</strong> do pobierania danych o
+                      miejscach, a także <strong>Firebase</strong> do obsługi
+                      bazy danych.
+                    </p>
+                    <br />
+                    <p>
+                      Aplikacja oferuje spersonalizowane wyszukiwanie miejsc z
+                      podziałem na kategorie i podkategorie, co pozwala na
+                      precyzyjne dopasowanie propozycji do zainteresowań
+                      użytkownika.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <!--
+          - hlprojects modal
+        -->
+
+          <div class="modal-container" data-modal-container>
+            <div class="overlay" data-overlay></div>
+
+            <section class="hlprojects-modal">
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img
+                    src="./assets/images/avatar-1.png"
+                    alt="Daniel lewis"
+                    width="80"
+                    data-modal-img
+                  />
+                </figure>
+              </div>
+
+              <div class="modal-content">
+                <h4 class="h3 modal-title" data-modal-title>Nazwa Projektu</h4>
+
+                <div data-modal-text>
+                  <p>Opis projektu</p>
+                </div>
+                <div
+                  class="modal-video-container"
+                  data-modal-video-container
+                  style="display: none"
+                >
+                  <video
+                    data-modal-video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    controls
+                    style="width: 100%; border-radius: 12px; margin: 15px 0"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+
+              <div class="modal-action-buttons">
+                <a href="#" class="modal-btn github-btn" data-github-link>
+                  <ion-icon name="logo-github"></ion-icon>
+                </a>
+              </div>
+            </section>
+          </div>
+
+          <!--
+          - technologies
+        -->
+
+          <section class="technologies">
+            <h3 class="h3 technologies-title">
+              Wykorzystywane w projektach technologie
+            </h3>
+
+            <ul class="technologies-list has-scrollbar">
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/python.png"
+                    alt="Python"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">Python</span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/cpp.png"
+                    alt="C++"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">C++</span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/react.png"
+                    alt="React"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">React / React Native</span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/pytorch.png"
+                    alt="PyTorch"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">PyTorch</span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/opengl.png"
+                    alt="OpenGL"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">OpenGL</span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/springboot.png"
+                    alt="Spring Boot"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">Spring Boot</span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/mssql.png"
+                    alt="Microsoft SQL Server"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">Microsoft SQL Server</span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/firebase.png"
+                    alt="Firebase"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">Firebase</span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/git.png"
+                    alt="Git"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">Git / GitHub</span>
+                </span>
+              </li>
+
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/m365.jpg"
+                    alt="Microsoft 365"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">Microsoft 365 / Office </span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/jupyter.png"
+                    alt="Jupyter Notebook"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">Jupyter Notebook</span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/ubuntu.png"
+                    alt="Ubuntu"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">Ubuntu</span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/powershell.png"
+                    alt="PowerShell"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">PowerShell</span>
+                </span>
+              </li>
+
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/googlecloud.png"
+                    alt="Google Cloud"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">Google Cloud</span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/arduino.png"
+                    alt="Arduino"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">Arduino</span>
+                </span>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #PORTFOLIO
+      -->
+
+        <article class="portfolio" data-page="projekty">
+          <header>
+            <h2 class="h2 article-title">Projekty</h2>
+          </header>
+
+          <section class="projects">
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>Wszystkie</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Informatyka</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Matematyka</button>
+              </li>
+            </ul>
+
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>
+                  Wybierz kategorię
+                </div>
+
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>Wszystkie</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Matematyka</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Informatyka</button>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="informatyka"
+              >
+                <a
+                  href="https://github.com/vadtrex/Projekt_GRK"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/wind_app.png"
+                      alt="Zrzut ekranu z aplikacji"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Wiatry Świata</h3>
+
+                  <p class="project-category">Informatyka</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="informatyka"
+              >
+                <a>
+                  <figure class="project-img">
+                    <img
+                      src="./assets/images/meetin_app.png"
+                      alt="Zrzut ekranu z aplikacji"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Aplikacja MEETin</h3>
+
+                  <p class="project-category">Informatyka</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="informatyka"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/smartphones_app.png"
+                      alt="Zrzut ekranu z aplikacji"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Baza danych smartfonów</h3>
+
+                  <p class="project-category">Informatyka</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="informatyka"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/microshell.png"
+                      alt="Zrzut ekranu z aplikacji"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">MicroShell</h3>
+
+                  <p class="project-category">Informatyka</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/meteo_app.png"
+                      alt="Zrzut ekranu z aplikacji"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">
+                    Aplikacja pogodowa w Bash i PowerShell
+                  </h3>
+
+                  <p class="project-category">Informatyka</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="matematyka"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/cubic_spline.png"
+                      alt="Zrzut ekranu z Jupyter Notebook"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Interpolacją funkcją sklejaną</h3>
+
+                  <p class="project-category">Matematyka</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="matematyka"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/mandelbrot.png"
+                      alt="Zrzut ekranu z Jupyter Notebook"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Zbiór Mandelbrota</h3>
+
+                  <p class="project-category">Matematyka</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="informatyka"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/quiz_game.png"
+                      alt="Zrzut ekranu z aplikacji"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Quiz Sieciowy</h3>
+
+                  <p class="project-category">informatyka</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #ARTICLES
+      -->
+
+        <article class="blog" data-page="artykuły">
+          <header>
+            <h2 class="h2 article-title">Artykuły</h2>
+          </header>
+
+          <section class="blog-posts">
+            <ul class="blog-posts-list">
+              <li class="blog-post-item">
+                <a
+                  href="assets/articles/Algorytm Canny'ego.pdf"
+                  target="_blank"
+                >
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/canny.png"
+                      alt="Algorytm Canny'ego"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Matematyka</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2025-01-01">styczeń, 2025</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">Algorytm Canny'ego</h3>
+
+                    <p class="blog-text">
+                      Operatory Sobela i Prewitta to matematyczne operatory
+                      różniczkowe, które są powszechnie stosowane w algorytmach
+                      przetwarzania obrazów i computer vision. Zastosowanie tych
+                      operatorów pozwala m.in. na wykrywanie krawędzi w
+                      obrazach, jednak wiąże się z pewnymi wadami (jak np.
+                      błędne wykrywanie szumu jako krawędzi)...
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a
+                  href="./assets/articles/Wygładzanie siatek modeli 3D.pdf"
+                  target="_blank"
+                >
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/mesh_smoothing.png"
+                      alt="Wygładzanie siatek modeli 3D"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Matematyka</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2025-01-01">styczeń, 2025</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Wygładzanie siatek modeli 3D
+                    </h3>
+
+                    <p class="blog-text">
+                      Wygładzanie siatek 3D to istotny krok w przetwarzaniu
+                      modeli przestrzennych, szczególnie cenny w przypadku
+                      modeli pozyskanych przy użyciu skanera 3D. U podstaw
+                      algorytmów wygładzania leży matematyczna teoria operatorów
+                      różniczkowych, a w szczególności - operator Laplace’a...
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a
+                  href="./assets/articles/Test Pierwszości Millera-Rabina.pdf"
+                  target="_blank"
+                >
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/millerrabin.png"
+                      alt="Test Pierwszości Millera-Rabina"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Matematyka</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2024-05-01">maj, 2024</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Test Pierwszości Millera-Rabina
+                    </h3>
+
+                    <p class="blog-text">
+                      Test Millera-Rabina to probabilistyczny test pierwszości,
+                      który sprawdza czy dana liczba jest liczbą pierwszą.
+                      Algorytm w wersji deterministycznej początkowo został
+                      opracowany przez Garry'ego Millera w 1975 roku, jednak
+                      jego poprawność opierała się na założeniu prawdziwości
+                      Uogólnionej hipotezy Riemanna...
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </div>
+    </main>
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
