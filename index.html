@@ -53,7 +53,7 @@
           </div>
 
           <button class="info_more-btn" data-sidebar-btn>
-            <span>Pokaż dane kontaktowe</span>
+            <span data-translate="show-contacts">Pokaż dane kontaktowe</span>
 
             <ion-icon name="chevron-down"></ion-icon>
           </button>
@@ -86,9 +86,13 @@
               </div>
 
               <div class="contact-info">
-                <p class="contact-title">Lokalizacja</p>
+                <p class="contact-title" data-translate="location">
+                  Lokalizacja
+                </p>
 
-                <address>Pobiedziska, Polska</address>
+                <address data-translate="location-address">
+                  Pobiedziska, Polska
+                </address>
               </div>
             </li>
           </ul>
@@ -121,30 +125,59 @@
         <nav class="navbar">
           <ul class="navbar-list">
             <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>O mnie</button>
+              <button
+                class="navbar-link active"
+                data-nav-link
+                data-translate="nav-about"
+              >
+                O mnie
+              </button>
             </li>
 
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Projekty</button>
+              <button
+                class="navbar-link"
+                data-nav-link
+                data-translate="nav-projects"
+              >
+                Projekty
+              </button>
             </li>
 
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Artykuły</button>
+              <button
+                class="navbar-link"
+                data-nav-link
+                data-translate="nav-articles"
+              >
+                Artykuły
+              </button>
             </li>
           </ul>
+
+          <button class="theme-toggle-btn" data-theme-toggle>
+            <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
+            <ion-icon name="moon-outline" class="moon-icon"></ion-icon>
+          </button>
+
+          <button class="lang-toggle-btn" data-lang-toggle>
+            <span class="lang-text">EN</span>
+          </button>
         </nav>
 
         <!--
         - #ABOUT
       -->
 
-        <article class="about active" data-page="o mnie">
+        <article class="about active" data-page="o mnie" data-page-en="about">
           <header>
-            <h2 class="h2 article-title">O mnie</h2>
+            <h2 class="h2 article-title" data-translate="about-title">
+              O mnie
+            </h2>
           </header>
 
           <section class="about-text">
-            <p>
+            <p data-translate="about-text">
               Jestem pasjonatem technologii z praktycznym doświadczeniem w
               branży IT i solidnym zapleczem technicznym. Studiuję informatykę
               na Uniwersytecie im. Adama Mickiewicza w Poznaniu, gdzie rozwijam
@@ -173,7 +206,9 @@
         -->
 
           <section class="hlprojects">
-            <h3 class="h3 hlprojects-title">Wyróżnione projekty</h3>
+            <h3 class="h3 hlprojects-title" data-translate="featured-projects">
+              Wyróżnione projekty
+            </h3>
 
             <ul class="hlprojects-list has-scrollbar">
               <li class="hlprojects-item">
@@ -192,10 +227,18 @@
                     />
                   </figure>
 
-                  <h4 class="h4 hlprojects-item-title" data-hlprojects-title>
+                  <h4
+                    class="h4 hlprojects-item-title"
+                    data-hlprojects-title
+                    data-translate="winds-project-title"
+                  >
                     Wiatry Świata
                   </h4>
-                  <div class="hlprojects-text" data-hlprojects-text>
+                  <div
+                    class="hlprojects-text"
+                    data-hlprojects-text
+                    data-translate="winds-project-description"
+                  >
                     <p>
                       Aplikacja oparta jest na bibliotece graficznej
                       <strong>OpenGL</strong> i umożliwia interaktywną
@@ -237,10 +280,18 @@
                     />
                   </figure>
 
-                  <h4 class="h4 hlprojects-item-title" data-hlprojects-title>
+                  <h4
+                    class="h4 hlprojects-item-title"
+                    data-hlprojects-title
+                    data-translate="meetin-project-title"
+                  >
                     Aplikacja MEETin
                   </h4>
-                  <div class="hlprojects-text" data-hlprojects-text>
+                  <div
+                    class="hlprojects-text"
+                    data-hlprojects-text
+                    data-translate="meetin-project-description"
+                  >
                     <p>
                       <strong>MEETin</strong> to aplikacja mobilna na Android i
                       iOS stworzona w <strong>React Native</strong>, która
@@ -323,7 +374,10 @@
         -->
 
           <section class="technologies">
-            <h3 class="h3 technologies-title">
+            <h3
+              class="h3 technologies-title"
+              data-translate="technologies-title"
+            >
               Wykorzystywane w projektach technologie
             </h3>
 
@@ -488,29 +542,45 @@
         - #PORTFOLIO
       -->
 
-        <article class="portfolio" data-page="projekty">
+        <article class="portfolio" data-page="projekty" data-page-en="projects">
           <header>
-            <h2 class="h2 article-title">Projekty</h2>
+            <h2 class="h2 article-title" data-translate="projects-title">
+              Projekty
+            </h2>
           </header>
 
           <section class="projects">
             <ul class="filter-list">
               <li class="filter-item">
-                <button class="active" data-filter-btn>Wszystkie</button>
+                <button
+                  class="active"
+                  data-filter-btn
+                  data-translate="filter-all"
+                >
+                  Wszystkie
+                </button>
               </li>
 
               <li class="filter-item">
-                <button data-filter-btn>Informatyka</button>
+                <button data-filter-btn data-translate="filter-cs">
+                  Informatyka
+                </button>
               </li>
 
               <li class="filter-item">
-                <button data-filter-btn>Matematyka</button>
+                <button data-filter-btn data-translate="filter-math">
+                  Matematyka
+                </button>
               </li>
             </ul>
 
             <div class="filter-select-box">
               <button class="filter-select" data-select>
-                <div class="select-value" data-selecct-value>
+                <div
+                  class="select-value"
+                  data-selecct-value
+                  data-translate="select-category"
+                >
                   Wybierz kategorię
                 </div>
 
@@ -521,15 +591,21 @@
 
               <ul class="select-list">
                 <li class="select-item">
-                  <button data-select-item>Wszystkie</button>
+                  <button data-select-item data-translate="filter-all">
+                    Wszystkie
+                  </button>
                 </li>
 
                 <li class="select-item">
-                  <button data-select-item>Matematyka</button>
+                  <button data-select-item data-translate="filter-math">
+                    Matematyka
+                  </button>
                 </li>
 
                 <li class="select-item">
-                  <button data-select-item>Informatyka</button>
+                  <button data-select-item data-translate="filter-cs">
+                    Informatyka
+                  </button>
                 </li>
               </ul>
             </div>
@@ -556,9 +632,16 @@
                     />
                   </figure>
 
-                  <h3 class="project-title">Wiatry Świata</h3>
+                  <h3
+                    class="project-title"
+                    data-translate="project-winds-title"
+                  >
+                    Wiatry Świata
+                  </h3>
 
-                  <p class="project-category">Informatyka</p>
+                  <p class="project-category" data-translate="filter-cs">
+                    Informatyka
+                  </p>
                 </a>
               </li>
 
@@ -576,9 +659,16 @@
                     />
                   </figure>
 
-                  <h3 class="project-title">Aplikacja MEETin</h3>
+                  <h3
+                    class="project-title"
+                    data-translate="project-meetin-title"
+                  >
+                    Aplikacja MEETin
+                  </h3>
 
-                  <p class="project-category">Informatyka</p>
+                  <p class="project-category" data-translate="filter-cs">
+                    Informatyka
+                  </p>
                 </a>
               </li>
 
@@ -600,9 +690,16 @@
                     />
                   </figure>
 
-                  <h3 class="project-title">Baza danych smartfonów</h3>
+                  <h3
+                    class="project-title"
+                    data-translate="project-smartphones-title"
+                  >
+                    Baza danych smartfonów
+                  </h3>
 
-                  <p class="project-category">Informatyka</p>
+                  <p class="project-category" data-translate="filter-cs">
+                    Informatyka
+                  </p>
                 </a>
               </li>
 
@@ -624,9 +721,16 @@
                     />
                   </figure>
 
-                  <h3 class="project-title">MicroShell</h3>
+                  <h3
+                    class="project-title"
+                    data-translate="project-microshell-title"
+                  >
+                    MicroShell
+                  </h3>
 
-                  <p class="project-category">Informatyka</p>
+                  <p class="project-category" data-translate="filter-cs">
+                    Informatyka
+                  </p>
                 </a>
               </li>
 
@@ -648,11 +752,16 @@
                     />
                   </figure>
 
-                  <h3 class="project-title">
+                  <h3
+                    class="project-title"
+                    data-translate="project-weather-title"
+                  >
                     Aplikacja pogodowa w Bash i PowerShell
                   </h3>
 
-                  <p class="project-category">Informatyka</p>
+                  <p class="project-category" data-translate="filter-cs">
+                    Informatyka
+                  </p>
                 </a>
               </li>
 
@@ -677,9 +786,16 @@
                     />
                   </figure>
 
-                  <h3 class="project-title">Interpolacją funkcją sklejaną</h3>
+                  <h3
+                    class="project-title"
+                    data-translate="project-cubic-spline-title"
+                  >
+                    Interpolacją funkcją sklejaną
+                  </h3>
 
-                  <p class="project-category">Matematyka</p>
+                  <p class="project-category" data-translate="filter-math">
+                    Matematyka
+                  </p>
                 </a>
               </li>
 
@@ -704,9 +820,16 @@
                     />
                   </figure>
 
-                  <h3 class="project-title">Zbiór Mandelbrota</h3>
+                  <h3
+                    class="project-title"
+                    data-translate="project-mandelbrot-title"
+                  >
+                    Zbiór Mandelbrota
+                  </h3>
 
-                  <p class="project-category">Matematyka</p>
+                  <p class="project-category" data-translate="filter-math">
+                    Matematyka
+                  </p>
                 </a>
               </li>
 
@@ -728,9 +851,13 @@
                     />
                   </figure>
 
-                  <h3 class="project-title">Quiz Sieciowy</h3>
+                  <h3 class="project-title" data-translate="project-quiz-title">
+                    Quiz Sieciowy
+                  </h3>
 
-                  <p class="project-category">informatyka</p>
+                  <p class="project-category" data-translate="filter-cs">
+                    informatyka
+                  </p>
                 </a>
               </li>
             </ul>
@@ -741,9 +868,11 @@
         - #ARTICLES
       -->
 
-        <article class="blog" data-page="artykuły">
+        <article class="blog" data-page="artykuły" data-page-en="articles">
           <header>
-            <h2 class="h2 article-title">Artykuły</h2>
+            <h2 class="h2 article-title" data-translate="articles-title">
+              Artykuły
+            </h2>
           </header>
 
           <section class="blog-posts">
@@ -763,11 +892,15 @@
 
                   <div class="blog-content">
                     <div class="blog-meta">
-                      <p class="blog-category">Matematyka</p>
+                      <p class="blog-category" data-translate="filter-math">
+                        Matematyka
+                      </p>
 
                       <span class="dot"></span>
 
-                      <time datetime="2025-01-01">styczeń, 2025</time>
+                      <time datetime="2025-01-01" data-translate="date-jan-2025"
+                        >styczeń, 2025</time
+                      >
                     </div>
 
                     <h3 class="h3 blog-item-title">Algorytm Canny'ego</h3>
@@ -777,8 +910,7 @@
                       różniczkowe, które są powszechnie stosowane w algorytmach
                       przetwarzania obrazów i computer vision. Zastosowanie tych
                       operatorów pozwala m.in. na wykrywanie krawędzi w
-                      obrazach, jednak wiąże się z pewnymi wadami (jak np.
-                      błędne wykrywanie szumu jako krawędzi)...
+                      obrazach, jednak wiąże się z pewnymi wadami...
                     </p>
                   </div>
                 </a>
@@ -799,11 +931,15 @@
 
                   <div class="blog-content">
                     <div class="blog-meta">
-                      <p class="blog-category">Matematyka</p>
+                      <p class="blog-category" data-translate="filter-math">
+                        Matematyka
+                      </p>
 
                       <span class="dot"></span>
 
-                      <time datetime="2025-01-01">styczeń, 2025</time>
+                      <time datetime="2025-01-01" data-translate="date-jan-2025"
+                        >styczeń, 2025</time
+                      >
                     </div>
 
                     <h3 class="h3 blog-item-title">
@@ -836,11 +972,15 @@
 
                   <div class="blog-content">
                     <div class="blog-meta">
-                      <p class="blog-category">Matematyka</p>
+                      <p class="blog-category" data-translate="filter-math">
+                        Matematyka
+                      </p>
 
                       <span class="dot"></span>
 
-                      <time datetime="2024-05-01">maj, 2024</time>
+                      <time datetime="2024-05-01" data-translate="date-may-2024"
+                        >maj, 2024</time
+                      >
                     </div>
 
                     <h3 class="h3 blog-item-title">
