@@ -484,7 +484,15 @@ main {
   color: var(--light-gray);
   font-size: var(--fs-8);
   padding: 20px 7px;
+  font-weight: var(--fw-600);
   transition: color var(--transition-1);
+}
+
+@media (max-width: 580px) {
+  .navbar-link {
+    font-size: var(--fs-4);
+    font-weight: var(--fw-600);
+  }
 }
 
 .navbar-link:hover,
