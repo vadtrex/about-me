@@ -923,6 +923,58 @@ main {
   margin-bottom: 15px;
 }
 
+@media (max-width: 480px) {
+  .modal-container {
+    padding: 20px;
+    align-items: flex-start;
+    padding-top: 10px;
+  }
+
+  .hlprojects-modal {
+    max-height: 95vh;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-img-wrapper {
+    flex-shrink: 0;
+    margin-bottom: 10px;
+  }
+
+  .modal-avatar-box img {
+    width: 50px;
+  }
+
+  .modal-content {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 85vh;
+  }
+
+  .modal-content div[data-modal-text] {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .modal-video-container {
+    max-height: 50vh;
+    overflow: hidden;
+  }
+
+  .modal-video-container video {
+    max-height: 50vh;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .modal-action-buttons {
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+}
+
 /**
  * #technologies 
  */
@@ -1763,10 +1815,6 @@ textarea.form-input::-webkit-resizer {
   }
 
   /* hlprojects modal */
-
-  .modal-container {
-    padding: 20px;
-  }
 
   .hlprojects-modal {
     display: flex;
