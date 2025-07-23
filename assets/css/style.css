@@ -1014,7 +1014,7 @@ main {
   filter: grayscale(0);
 }
 
-@media (min-width: 580px) {
+@media (min-width: 581px) {
   .tech-tooltip-wrapper {
     position: relative;
     display: inline-block;
@@ -1044,7 +1044,7 @@ main {
   }
 }
 
-@media (max-width: 579px) {
+@media (max-width: 580px) {
   .tech-tooltip-wrapper {
     position: relative;
     display: flex;
