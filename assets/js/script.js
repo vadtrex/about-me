@@ -13,7 +13,7 @@ const translations = {
     "about-text":
       "Jestem pasjonatem technologii z praktycznym doświadczeniem w branży IT i solidnym zapleczem technicznym. Studiuję informatykę na Uniwersytecie im. Adama Mickiewicza w Poznaniu, gdzie rozwijam swoje kompetencje informatyczne oraz znajomość nowoczesnych technologii. W Fundacji MEETin pełniłem funkcję Specjalisty ds. IT i odpowiadałem za prowadzenie projektów zespołowych oraz utrzymanie systemów informatycznych. Pracując z zespołem, zdobyłem umiejętności efektywnej współpracy i organizacji pracy. <br /><br />Posiadam doświadczenie w programowaniu (Python, C++, React i React Native), obsłudze baz danych (SQL Server i Firebase) oraz pracy z chmurą (Google Cloud). Swobodnie poruszam się w środowiskach Windows i Linux oraz dobrze znam narzędzia do kontroli wersji, co pozwala mi efektywnie realizować zadania i szybko dostosowywać się do nowych zadań. Jestem osobą zorganizowaną, skrupulatną i nastawioną na analityczne podejście do rozwiązywania problemów, samodzielność i szybkie przyswajanie nowych technologii.<br />Dążę do ciągłego rozwoju w obszarze IT, angażując się w projekty wymagające innowacyjności i elastyczności.",
     "featured-projects": "Wyróżnione projekty",
-    "technologies-title": "Wykorzystywane w projektach technologie",
+    "technologies-title": "Technologie wykorzystywane w projektach",
     "projects-title": "Projekty",
     "articles-title": "Artykuły",
     "filter-all": "Wszystkie",
