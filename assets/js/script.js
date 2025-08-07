@@ -79,8 +79,13 @@ const langToggleBtn = document.querySelector("[data-lang-toggle]");
 const langText = document.querySelector(".lang-text");
 const html = document.documentElement;
 
-// Check for saved language preference or default to 'pl'
-const currentLang = localStorage.getItem("language") || "pl";
+// Function to detect browser language and return 'pl' for Polish, 'en' for others
+function detectBrowserLanguage() {
+  const browserLang = navigator.language || navigator.userLanguage;
+  return browserLang.toLowerCase().startsWith("pl") ? "pl" : "en";
+}
+
+const currentLang = localStorage.getItem("language") || detectBrowserLanguage();
 html.setAttribute("data-lang", currentLang);
 langText.textContent = currentLang === "pl" ? "EN" : "PL";
 
