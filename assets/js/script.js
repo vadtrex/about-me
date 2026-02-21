@@ -20,6 +20,10 @@ const translations = {
     "filter-cs": "Informatyka",
     "filter-math": "Matematyka",
     "select-category": "Wybierz kategorię",
+    "project-claim-title":
+      "Model sztucznej inteligencji do klasyfikacji wypowiedzi",
+    "project-transcription-title":
+      "Mikroserwis do transkrypcji i klasyfikacji wypowiedzi",
     "project-winds-title": "Wiatry Świata",
     "project-meetin-title": "Aplikacja MEETin",
     "project-smartphones-title": "Baza danych smartfonów",
@@ -55,6 +59,9 @@ const translations = {
     "filter-cs": "Computer Science",
     "filter-math": "Mathematics",
     "select-category": "Select category",
+    "project-claim-title": "AI model for statement classification",
+    "project-transcription-title":
+      "Microservice for recordings transcription and statements classification",
     "project-winds-title": "World Winds",
     "project-meetin-title": "MEETin App",
     "project-smartphones-title": "Smartphones Database",
@@ -71,6 +78,7 @@ const translations = {
       "<strong>MEETin</strong> is a mobile application for Android and iOS created in <strong>React Native</strong> that makes it easier to find meeting places with friends based on user preferences. It uses <strong>Google Maps API</strong> to retrieve places data, as well as <strong>Firebase</strong> for database management.<br /><br />The application offers personalized places search divided into categories and subcategories, which allows for precise matching of suggestions to user interests.",
     "date-jan-2025": "January, 2025",
     "date-may-2024": "May, 2024",
+    "date-jan-2026": "January, 2026",
   },
 };
 
