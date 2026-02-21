@@ -19,6 +19,7 @@ const translations = {
     "filter-all": "Wszystkie",
     "filter-cs": "Informatyka",
     "filter-math": "Matematyka",
+    "filter-ai": "Sztuczna inteligencja",
     "select-category": "Wybierz kategorię",
     "project-claim-title":
       "Model sztucznej inteligencji do klasyfikacji wypowiedzi",
@@ -58,6 +59,7 @@ const translations = {
     "filter-all": "All",
     "filter-cs": "Computer Science",
     "filter-math": "Mathematics",
+    "filter-ai": "Artificial Intelligence",
     "select-category": "Select category",
     "project-claim-title": "AI model for statement classification",
     "project-transcription-title":
@@ -252,6 +254,7 @@ for (let i = 0; i < selectItems.length; i++) {
       "filter-all": "wszystkie",
       "filter-cs": "informatyka",
       "filter-math": "matematyka",
+      "filter-ai": "sztuczna inteligencja",
     };
 
     const mappedValue = categoryMap[selectedValue] || selectedValue;
@@ -287,6 +290,7 @@ for (let i = 0; i < filterBtn.length; i++) {
       "filter-all": "wszystkie",
       "filter-cs": "informatyka",
       "filter-math": "matematyka",
+      "filter-ai": "sztuczna inteligencja",
     };
 
     const mappedValue = categoryMap[selectedValue] || selectedValue;
