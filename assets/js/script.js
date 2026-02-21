@@ -11,7 +11,7 @@ const translations = {
     "location-address": "Pobiedziska, Polska",
     "about-title": "O mnie",
     "about-text":
-      "Jestem pasjonatem technologii z praktycznym doświadczeniem w branży IT i solidnym zapleczem technicznym. Studiuję informatykę na Uniwersytecie im. Adama Mickiewicza w Poznaniu, gdzie rozwijam swoje kompetencje informatyczne oraz znajomość nowoczesnych technologii. W Fundacji MEETin pełniłem funkcję Specjalisty ds. IT i odpowiadałem za prowadzenie projektów zespołowych oraz utrzymanie systemów informatycznych. Pracując z zespołem, zdobyłem umiejętności efektywnej współpracy i organizacji pracy. <br /><br />Posiadam doświadczenie w programowaniu (Python, C++, React i React Native), obsłudze baz danych (SQL Server i Firebase) oraz pracy z chmurą (Google Cloud). Swobodnie poruszam się w środowiskach Windows i Linux oraz dobrze znam narzędzia do kontroli wersji, co pozwala mi efektywnie realizować zadania i szybko dostosowywać się do nowych zadań. Jestem osobą zorganizowaną, skrupulatną i nastawioną na analityczne podejście do rozwiązywania problemów, samodzielność i szybkie przyswajanie nowych technologii.<br />Dążę do ciągłego rozwoju w obszarze IT, angażując się w projekty wymagające innowacyjności i elastyczności.",
+      "Jestem pasjonatem technologii z praktycznym doświadczeniem w branży IT i solidnym zapleczem technicznym. Studiuję informatykę na Uniwersytecie im. Adama Mickiewicza w Poznaniu, gdzie rozwijam swoje kompetencje informatyczne oraz znajomość nowoczesnych technologii. W Fundacji MEETin pełniłem funkcję Specjalisty ds. IT i odpowiadałem za prowadzenie projektów zespołowych oraz utrzymanie systemów informatycznych. Pracując z zespołem, zdobyłem umiejętności efektywnej współpracy i organizacji pracy. <br /><br />Posiadam doświadczenie w programowaniu (Python, C++, React i React Native), analizie danych (Microsoft Fabric, Microsoft Power BI i Pandas), obsłudze baz danych (SQL Server i Firebase) oraz pracy z chmurą (Google Cloud, Firebase i Amazon Web Services). Swobodnie poruszam się w środowiskach Windows i Linux oraz dobrze znam narzędzia do kontroli wersji, co pozwala mi efektywnie realizować zadania i szybko dostosowywać się do nowych zadań. Jestem osobą zorganizowaną, skrupulatną i nastawioną na analityczne podejście do rozwiązywania problemów, samodzielność i szybkie przyswajanie nowych technologii.<br />Dążę do ciągłego rozwoju w obszarze IT, angażując się w projekty wymagające innowacyjności i elastyczności.",
     "featured-projects": "Wyróżnione projekty",
     "technologies-title": "Technologie wykorzystywane w projektach",
     "projects-title": "Projekty",
@@ -46,7 +46,7 @@ const translations = {
     "location-address": "Pobiedziska, Poland",
     "about-title": "About me",
     "about-text":
-      "I am a technology enthusiast with practical experience in the IT industry and a strong technical background. I study computer science at Adam Mickiewicz University in Poznań, where I develop my IT skills and knowledge of modern technologies. At the MEETin Foundation, I served as an IT Specialist and was responsible for leading team projects and maintaining IT systems. Working in a team environment allowed me to gain valuable experience in collaboration and work organization.  <br /><br /> I have experience in programming (Python, C++, React, and React Native), database management (SQL Server and Firebase), and cloud computing (Google Cloud). I am comfortable working in Windows and Linux environments and proficient in version control tools, which allows me to efficiently complete tasks and quickly adapt to new challenges. I am organized, meticulous, and focused on analytical problem-solving, independence, and rapid acquisition of new technologies. <br />I strive for continuous development in the IT field, engaging in projects that require innovation and flexibility.",
+      "I am a technology enthusiast with practical experience in the IT industry and a strong technical background. I study computer science at Adam Mickiewicz University in Poznań, where I develop my IT skills and knowledge of modern technologies. At the MEETin Foundation, I served as an IT Specialist and was responsible for leading team projects and maintaining IT systems. Working in a team environment allowed me to gain valuable experience in collaboration and work organization.  <br /><br /> I have experience in programming (Python, C++, React, and React Native), data analysis (Microsoft Fabric, Microsoft Power BI and Pandas), database management (SQL Server and Firebase), and cloud computing (Google Cloud, Firebase and Amazon Web Services). I am comfortable working in Windows and Linux environments and proficient in version control tools, which allows me to efficiently complete tasks and quickly adapt to new challenges. I am organized, meticulous, and focused on analytical problem-solving, independence, and rapid acquisition of new technologies. <br />I strive for continuous development in the IT field, engaging in projects that require innovation and flexibility.",
     "featured-projects": "Featured projects",
     "technologies-title": "Technologies used in projects",
     "projects-title": "Projects",
@@ -164,17 +164,17 @@ for (let i = 0; i < hlprojectsItems.length; i++) {
     const modalTitle = document.querySelector("[data-modal-title]");
     const modalText = document.querySelector("[data-modal-text]");
     const modalVideoContainer = document.querySelector(
-      "[data-modal-video-container]"
+      "[data-modal-video-container]",
     );
     const modalVideo = document.querySelector("[data-modal-video]");
 
     modalImg.src = this.querySelector("[data-hlprojects-icon]").src;
     modalImg.alt = this.querySelector("[data-hlprojects-icon]").alt;
     modalTitle.innerHTML = this.querySelector(
-      "[data-hlprojects-title]"
+      "[data-hlprojects-title]",
     ).innerHTML;
     modalText.innerHTML = this.querySelector(
-      "[data-hlprojects-text]"
+      "[data-hlprojects-text]",
     ).innerHTML;
 
     // Get video and github URLs
