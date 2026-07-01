@@ -765,9 +765,10 @@ main {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   overflow-y: auto;
   overscroll-behavior: contain;
+  padding: 15px 12px;
   z-index: 20;
   pointer-events: none;
   visibility: hidden;
@@ -806,7 +807,7 @@ main {
   background: var(--eerie-black-2);
   position: relative;
   padding: 15px;
-  margin: 15px 12px;
+  margin: 0;
   border: 1px solid var(--jet);
   border-radius: 14px;
   box-shadow: var(--shadow-5);
@@ -814,6 +815,7 @@ main {
   opacity: 0;
   transition: var(--transition-1);
   z-index: 2;
+  width: 100%;
 }
 
 .modal-container.active .hlprojects-modal {
@@ -901,6 +903,7 @@ main {
 
 .modal-title {
   margin-bottom: 4px;
+  padding-right: 80px;
 }
 
 .modal-content time {
@@ -924,6 +927,38 @@ main {
 .modal-content div p {
   color: var(--white-2);
   margin-bottom: 15px;
+}
+
+@media (min-width: 481px) {
+  .modal-container {
+    padding: 24px 20px;
+  }
+
+  .hlprojects-modal {
+    max-height: calc(100dvh - 48px);
+    overflow: hidden;
+    margin-inline: auto;
+  }
+
+  .modal-img-wrapper {
+    flex-shrink: 0;
+  }
+
+  .modal-content {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    max-height: calc(100dvh - 180px);
+  }
+
+  .modal-content::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .modal-content::-webkit-scrollbar-thumb {
+    background: var(--jet);
+    border-radius: 3px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1837,12 +1872,24 @@ textarea.form-input::-webkit-resizer {
     gap: 25px;
     padding: 30px;
     border-radius: 20px;
+    max-height: calc(100dvh - 48px);
+    overflow: hidden;
   }
 
   .modal-img-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-shrink: 0;
+  }
+
+  .modal-content {
+    flex: 1;
+    min-height: 0;
+    min-width: 0;
+    max-height: none;
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 
   .modal-avatar-box {
@@ -1987,7 +2034,7 @@ textarea.form-input::-webkit-resizer {
 
   .hlprojects-modal {
     gap: 35px;
-    max-width: 680px;
+    max-width: 900px;
   }
 
   .modal-avatar-box img {

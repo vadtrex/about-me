@@ -11,7 +11,7 @@ const translations = {
     "location-address": "Pobiedziska, Polska",
     "about-title": "O mnie",
     "about-text":
-      "Jestem pasjonatem technologii z praktycznym doświadczeniem w branży IT i solidnym zapleczem technicznym. Studiuję informatykę na Uniwersytecie im. Adama Mickiewicza w Poznaniu, gdzie rozwijam swoje kompetencje informatyczne oraz znajomość nowoczesnych technologii. W Fundacji MEETin pełniłem funkcję Specjalisty ds. IT i odpowiadałem za prowadzenie projektów zespołowych oraz utrzymanie systemów informatycznych. Pracując z zespołem, zdobyłem umiejętności efektywnej współpracy i organizacji pracy. <br /><br />Posiadam doświadczenie w programowaniu (Python, C++, React i React Native), analizie danych (Microsoft Fabric, Microsoft Power BI i Pandas), obsłudze baz danych (SQL Server i Firebase) oraz pracy z chmurą (Google Cloud, Firebase i Amazon Web Services). Swobodnie poruszam się w środowiskach Windows i Linux oraz dobrze znam narzędzia do kontroli wersji, co pozwala mi efektywnie realizować zadania i szybko dostosowywać się do nowych zadań. Jestem osobą zorganizowaną, skrupulatną i nastawioną na analityczne podejście do rozwiązywania problemów, samodzielność i szybkie przyswajanie nowych technologii.<br />Dążę do ciągłego rozwoju w obszarze IT, angażując się w projekty wymagające innowacyjności i elastyczności.",
+      "Pasjonat technologii ze specjalizacją w sztucznej inteligencji, łączący praktyczne doświadczenie w IT z solidnym zapleczem technicznym. Studiuję informatykę (spec. Sztuczna Inteligencja) na UAM w Poznaniu. Zajmowałem się w praktyce fine-tuningiem modeli językowych oraz uruchamianiem dużych modeli LLM lokalnie i w chmurze. <br /><br />Posiadam doświadczenie w programowaniu (Python, React, React Native), analizie danych (Power BI, Pandas, Microsoft Fabric) oraz pracy z chmurą (GCP, AWS, Firebase). <br /><br />Jestem osobą analityczną, samodzielną i szybko przyswajającą nowe technologie.",
     "featured-projects": "Wyróżnione projekty",
     "technologies-title": "Technologie wykorzystywane w projektach",
     "projects-title": "Projekty",
@@ -21,6 +21,8 @@ const translations = {
     "filter-math": "Matematyka",
     "filter-ai": "Sztuczna inteligencja",
     "select-category": "Wybierz kategorię",
+    "project-rap-classifier-title":
+      "Klasyfikator autorstwa zwrotek rapowych - NLP i LLM",
     "project-claim-title":
       "Model sztucznej inteligencji do klasyfikacji wypowiedzi",
     "project-transcription-title":
@@ -39,6 +41,13 @@ const translations = {
     "meetin-project-title": "Aplikacja MEETin",
     "meetin-project-description":
       "<strong>MEETin</strong> to aplikacja mobilna na Android i iOS stworzona w <strong>React Native</strong>, która ułatwia znajdowanie miejsc spotkań z przyjaciółmi na podstawie preferencji użytkownika. Wykorzystuje <strong>Google Maps API</strong> do pobierania danych o miejscach, a także <strong>Firebase</strong> do obsługi bazy danych.<br /><br />Aplikacja oferuje spersonalizowane wyszukiwanie miejsc z podziałem na kategorie i podkategorie, co pozwala na precyzyjne dopasowanie propozycji do zainteresowań użytkownika.",
+    "rap-project-title": "Klasyfikator autorstwa zwrotek rapowych - NLP i LLM",
+    "rap-project-description":
+      "W ramach projektu zostały dostrojone modele językowe do zadania klasyfikacji autorstwa zwrotek rapowych, czyli rozpoznawania jednego z 20 polskich raperów na podstawie tekstu zwrotki rapowej.<br /><br />Zbiór danych został przygotowany samodzielnie: teksty pobrano z <strong>Genius API</strong>, sparsowano na pojedyncze zwrotki i oczyszczono (ok. 8 tys. rekordów, 20 klas). Dane podzielono na zbiór treningowy i testowy.<br /><br />Dostrojono dwa modele bazowe - <strong>Qwen3.5-4B</strong> oraz <strong>Gemma-4-E2B</strong> - metodą <strong>QLoRA</strong> (z biblioteką <strong>Unsloth</strong> i <strong>Transformers</strong>) wraz z głowicą klasyfikacyjną. Główną metryką ewaluacji było <strong>macro-F1</strong> - najlepszy model osiągnął wartość ok. 0,63 i 64% accuracy.<br /><br />Do inferencji przygotowano skrypt <strong>classify.py</strong> oraz notebooki z pełnym pipeline'em (przygotowanie danych, trening, testowanie). Na bazie modeli powstała aplikacja <strong>„Quiz Rapowy”</strong> (React + Vite) - pojedynek <strong>Człowiek vs AI</strong>, w którym użytkownik porównuje swój wynik z predykcjami obu modeli.<br /><br />W projekcie wykorzystano m.in. <strong>PyTorch</strong>, <strong>Hugging Face Transformers</strong>, <strong>PEFT</strong>, <strong>Unsloth</strong> i <strong>scikit-learn</strong>.",
+    "claim-project-title":
+      "Model sztucznej inteligencji do klasyfikacji wypowiedzi",
+    "claim-project-description":
+      "W ramach projektu stworzony został model sztucznej inteligencji do <strong>binarnej klasyfikacji wypowiedzi</strong> w języku polskim - rozróżniania <strong>CLAIM</strong> (stwierdzeń wartych analizy fact-checkingowej) od <strong>NOT CLAIM</strong> (wypowiedzi, które nie są stwierdzeniami lub nie wymagają takiej weryfikacji).<br /><br />Jako zbiór danych wykorzystano <strong>ClaimBuster</strong> (Fatma Arslan et al., Zenodo 2020). Przetłumaczono 2 237 zdań z angielskiego na polski za pomocą <strong>DeepL API</strong>, a etykiety przekształcono na binarne. Dane podzielono na zbiór treningowy (80%) i testowy (20%) ze stratyfikacją.<br /><br />Model bazowy to <strong>SmolLM-1.7B</strong>. Na warstwy uwagi nałożono adapter <strong>LoRA</strong>. Trening przeprowadzono przez 10 epok z użyciem klasy <strong>Trainer</strong> z Hugging Face Transformers; główną metryką ewaluacji był <strong>F1-score</strong>.<br /><br />Do inferencji przygotowano skrypt <strong>infer.py</strong> - umożliwia klasyfikację pojedynczego zdania z linii poleceń lub uruchomienie na zestawie przykładowych zdań, z obsługą akceleracji GPU (CUDA / MPS). Pełny pipeline (pobieranie danych, tłumaczenie, trening, testowanie) opisano w notebooku <strong>projekt.ipynb</strong>.<br /><br />W projekcie wykorzystano m.in. <strong>PyTorch</strong>, <strong>Hugging Face Transformers</strong>, <strong>PEFT</strong>, <strong>Datasets</strong>, <strong>scikit-learn</strong>, <strong>pandas</strong> i <strong>numpy</strong>.",
     "date-jan-2025": "styczeń, 2025",
     "date-may-2024": "maj, 2024",
   },
@@ -51,7 +60,7 @@ const translations = {
     "location-address": "Pobiedziska, Poland",
     "about-title": "About me",
     "about-text":
-      "I am a technology enthusiast with practical experience in the IT industry and a strong technical background. I study computer science at Adam Mickiewicz University in Poznań, where I develop my IT skills and knowledge of modern technologies. At the MEETin Foundation, I served as an IT Specialist and was responsible for leading team projects and maintaining IT systems. Working in a team environment allowed me to gain valuable experience in collaboration and work organization.  <br /><br /> I have experience in programming (Python, C++, React, and React Native), data analysis (Microsoft Fabric, Microsoft Power BI and Pandas), database management (SQL Server and Firebase), and cloud computing (Google Cloud, Firebase and Amazon Web Services). I am comfortable working in Windows and Linux environments and proficient in version control tools, which allows me to efficiently complete tasks and quickly adapt to new challenges. I am organized, meticulous, and focused on analytical problem-solving, independence, and rapid acquisition of new technologies. <br />I strive for continuous development in the IT field, engaging in projects that require innovation and flexibility.",
+      "A technology enthusiast specializing in artificial intelligence, combining hands-on IT experience with a solid technical foundation. I study Computer Science (Artificial Intelligence specialization) at Adam Mickiewicz University in Poznań. In practice, I have fine-tuned language models and run LLMs locally and in the cloud. <br /><br />I have experience in programming (Python, React, React Native), data analysis (Power BI, Pandas, Microsoft Fabric), and cloud computing (GCP, AWS, Firebase). <br /><br />I am analytical, independent, and a fast learner of new technologies.",
     "featured-projects": "Featured projects",
     "technologies-title": "Technologies used in projects",
     "projects-title": "Projects",
@@ -61,6 +70,8 @@ const translations = {
     "filter-math": "Mathematics",
     "filter-ai": "Artificial Intelligence",
     "select-category": "Select category",
+    "project-rap-classifier-title":
+      "Rap Verse Authorship Classifier - NLP & LLM",
     "project-claim-title": "AI model for statement classification",
     "project-transcription-title":
       "Microservice for recordings transcription and statements classification",
@@ -78,6 +89,12 @@ const translations = {
     "meetin-project-title": "MEETin App",
     "meetin-project-description":
       "<strong>MEETin</strong> is a mobile application for Android and iOS created in <strong>React Native</strong> that makes it easier to find meeting places with friends based on user preferences. It uses <strong>Google Maps API</strong> to retrieve places data, as well as <strong>Firebase</strong> for database management.<br /><br />The application offers personalized places search divided into categories and subcategories, which allows for precise matching of suggestions to user interests.",
+    "rap-project-title": "Rap Verse Authorship Classifier - NLP & LLM",
+    "rap-project-description":
+      "As part of the project, language models were fine-tuned for rap verse authorship classification - recognizing one of 20 Polish rappers based on the text of a rap verse.<br /><br />The dataset was prepared from scratch: lyrics were collected from the <strong>Genius API</strong>, parsed into individual verses, and cleaned (~8k records, 20 classes). The data was split into training and test sets.<br /><br />Two base models - <strong>Qwen3.5-4B</strong> and <strong>Gemma-4-E2B</strong> - were fine-tuned with <strong>QLoRA</strong> (using <strong>Unsloth</strong> and <strong>Transformers</strong>) along with a classification head. The main evaluation metric was <strong>macro-F1</strong>; the best model achieved a value of about 0.63 and 64% accuracy.<br /><br />An inference script, <strong>classify.py</strong>, and notebooks documenting the full pipeline (data preparation, training, testing) were prepared. On top of the models, a <strong>“Rap Quiz”</strong> app (React + Vite) was built - a <strong>Human vs AI</strong> challenge where the user compares their score with predictions from both models.<br /><br />The project uses <strong>PyTorch</strong>, <strong>Hugging Face Transformers</strong>, <strong>PEFT</strong>, <strong>Unsloth</strong>, and <strong>scikit-learn</strong>, among others.",
+    "claim-project-title": "AI model for statement classification",
+    "claim-project-description":
+      "As part of the project, an artificial intelligence model was built for <strong>binary classification of Polish statements</strong> - distinguishing <strong>CLAIM</strong> (statements worth fact-checking) from <strong>NOT CLAIM</strong> (utterances that are not statements or do not require such verification).<br /><br />The <strong>ClaimBuster</strong> dataset was used (Fatma Arslan et al., Zenodo 2020). A total of 2,237 sentences were translated from English to Polish using the <strong>DeepL API</strong>, and labels were converted to binary form. The data was split into training (80%) and test (20%) sets with stratification.<br /><br />The base model is <strong>SmolLM-1.7B</strong>. A <strong>LoRA</strong> adapter was applied to attention layers. Training ran for 10 epochs using the Hugging Face <strong>Trainer</strong> class; the main evaluation metric was <strong>F1-score</strong>.<br /><br />An inference script, <strong>infer.py</strong>, was prepared - it classifies a single sentence from the command line or runs on a set of sample sentences, with GPU acceleration support (CUDA / MPS). The full pipeline (data collection, translation, training, testing) is documented in the <strong>projekt.ipynb</strong> notebook.<br /><br />The project uses <strong>PyTorch</strong>, <strong>Hugging Face Transformers</strong>, <strong>PEFT</strong>, <strong>Datasets</strong>, <strong>scikit-learn</strong>, <strong>pandas</strong>, and <strong>numpy</strong>, among others.",
     "date-jan-2025": "January, 2025",
     "date-may-2024": "May, 2024",
     "date-jan-2026": "January, 2026",
@@ -165,6 +182,9 @@ const githubBtn = document.querySelector("[data-github-link]");
 const hlprojectsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
+  document.body.style.overflow = modalContainer.classList.contains("active")
+    ? "hidden"
+    : "";
 };
 
 // Add click event to all hlprojects items

@@ -178,28 +178,20 @@
 
           <section class="about-text">
             <p data-translate="about-text">
-              Jestem pasjonatem technologii z praktycznym doświadczeniem w
-              branży IT i solidnym zapleczem technicznym. Studiuję informatykę
-              na Uniwersytecie im. Adama Mickiewicza w Poznaniu, gdzie rozwijam
-              swoje kompetencje informatyczne oraz znajomość nowoczesnych
-              technologii. W Fundacji MEETin pełniłem funkcję Specjalisty ds. IT
-              i odpowiadałem za prowadzenie projektów zespołowych oraz
-              utrzymanie systemów informatycznych. Pracując z zespołem, zdobyłem
-              umiejętności efektywnej współpracy i organizacji pracy. <br />
+              Pasjonat technologii ze specjalizacją w sztucznej inteligencji,
+              łączący praktyczne doświadczenie w IT z solidnym zapleczem
+              technicznym. Studiuję informatykę (spec. Sztuczna Inteligencja) na
+              UAM w Poznaniu. Zajmowałem się w praktyce fine-tuningiem modeli
+              językowych oraz uruchamianiem dużych modeli LLM lokalnie i w chmurze.
               <br />
-              Posiadam doświadczenie w programowaniu (Python, C++, React i React
-              Native), analizie danych (Microsoft Fabric, Microsoft Power BI i
-              Pandas), obsłudze baz danych (SQL Server i Firebase) oraz pracy z
-              chmurą (Google Cloud, Firebase i Amazon Web Services). Swobodnie
-              poruszam się w środowiskach Windows i Linux oraz dobrze znam
-              narzędzia do kontroli wersji, co pozwala mi efektywnie realizować
-              zadania i szybko dostosowywać się do nowych zadań. Jestem osobą
-              zorganizowaną, skrupulatną i nastawioną na analityczne podejście
-              do rozwiązywania problemów, samodzielność i szybkie przyswajanie
-              nowych technologii.
               <br />
-              Dążę do ciągłego rozwoju w obszarze IT, angażując się w projekty
-              wymagające innowacyjności i elastyczności.
+              Posiadam doświadczenie w programowaniu (Python, React, React
+              Native), analizie danych (Power BI, Pandas, Microsoft Fabric) oraz
+              pracy z chmurą (GCP, AWS, Firebase).
+              <br />
+              <br />
+              Jestem osobą analityczną, samodzielną i szybko przyswajającą nowe
+              technologie.
             </p>
           </section>
 
@@ -217,13 +209,13 @@
                 <div
                   class="content-card"
                   data-hlprojects-item
-                  data-video-url="./assets/videos/wiatry_swiata.mp4"
-                  data-github-url="https://github.com/vadtrex/Projekt_GRK"
+                  data-video-url="./assets/videos/rap_quiz.mp4"
+                  data-github-url="https://github.com/vadtrex/Projekt-PJN"
                 >
                   <figure class="hlprojects-icon-box">
                     <img
-                      src="./assets/images/wiatry_swiata.png"
-                      alt="Wiatry Świata"
+                      src="./assets/images/rap_icon.png"
+                      alt="Klasyfikator autorstwa zwrotek rapowych"
                       width="60"
                       data-hlprojects-icon
                     />
@@ -232,35 +224,55 @@
                   <h4
                     class="h4 hlprojects-item-title"
                     data-hlprojects-title
-                    data-translate="winds-project-title"
+                    data-translate="rap-project-title"
                   >
-                    Wiatry Świata
+                    Klasyfikator autorstwa zwrotek rapowych - NLP i LLM
                   </h4>
                   <div
                     class="hlprojects-text"
                     data-hlprojects-text
-                    data-translate="winds-project-description"
+                    data-translate="rap-project-description"
                   >
                     <p>
-                      Aplikacja oparta jest na bibliotece graficznej
-                      <strong>OpenGL</strong> i umożliwia interaktywną
-                      wizualizację globalnych wzorców wiatru na trójwymiarowym
-                      modelu kuli ziemskiej. Projekt prezentuje dane
-                      meteorologiczne w przystępny sposób, wykorzystując przy
-                      tym wiele technik grafiki komputerowej. Aplikacja pozwala
-                      na odczyt kierunków i prędkości wiatrów na całym świecie
-                      na podstawie historycznych danych, korzystając z
-                      <strong>API NOMADS</strong>
-                      (https://nomads.ncep.noaa.gov/) dostarczonego przez
-                      National Oceanic and Atmospheric Administration.
-                      <br />
-                      <br />
-
-                      Dzięki prostemu interfejsowi wraz z samouczkiem oraz
-                      graficznym elementom, takim jak animowane linie wiatru
-                      oraz strzałki z dominującymi kierunkami wiatru, aplikacja
-                      pozwala w łatwy sposób analizować i interpretować zjawiska
-                      atmosferyczne.
+                      W ramach projektu zostały dostrojone modele językowe do
+                      zadania klasyfikacji autorstwa zwrotek rapowych, czyli
+                      rozpoznawania jednego z 20 polskich raperów na podstawie
+                      tekstu zwrotki rapowej.
+                    </p>
+                    <br />
+                    <p>
+                      Zbiór danych został przygotowany samodzielnie: teksty
+                      pobrano z <strong>Genius API</strong>, sparsowano na
+                      pojedyncze zwrotki i oczyszczono (ok. 8 tys. rekordów, 20
+                      klas). Dane podzielono na zbiór treningowy i testowy.
+                    </p>
+                    <br />
+                    <p>
+                      Dostrojono dwa modele bazowe -
+                      <strong>Qwen3.5-4B</strong> oraz
+                      <strong>Gemma-4-E2B</strong> - metodą
+                      <strong>QLoRA</strong> (z biblioteką
+                      <strong>Unsloth</strong> i <strong>Transformers</strong>)
+                      wraz z głowicą klasyfikacyjną. Główną metryką ewaluacji
+                      było <strong>macro-F1</strong> - najlepszy model osiągnął
+                      wartość ok. 0,63 i 64% accuracy.
+                    </p>
+                    <br />
+                    <p>
+                      Do inferencji przygotowano skrypt
+                      <strong>classify.py</strong> oraz notebooki z pełnym
+                      pipeline'em (przygotowanie danych, trening, testowanie). Na
+                      bazie modeli powstała aplikacja
+                      <strong>„Quiz Rapowy”</strong> (React + Vite) - pojedynek
+                      <strong>Człowiek vs AI</strong>, w którym użytkownik
+                      porównuje swój wynik z predykcjami obu modeli.
+                    </p>
+                    <br />
+                    <p>
+                      W projekcie wykorzystano m.in. <strong>PyTorch</strong>,
+                      <strong>Hugging Face Transformers</strong>,
+                      <strong>PEFT</strong>, <strong>Unsloth</strong> i
+                      <strong>scikit-learn</strong>.
                     </p>
                   </div>
                 </div>
@@ -270,13 +282,13 @@
                 <div
                   class="content-card"
                   data-hlprojects-item
-                  data-video-url="./assets/videos/meetin.mp4"
-                  data-github-url=""
+                  data-video-url=""
+                  data-github-url="https://github.com/vadtrex/Projekt-UM"
                 >
                   <figure class="hlprojects-icon-box">
                     <img
-                      src="./assets/images/meetin.png"
-                      alt="Aplikacja MEETin"
+                      src="./assets/images/claim_icon.png"
+                      alt="Model sztucznej inteligencji do klasyfikacji wypowiedzi"
                       width="60"
                       data-hlprojects-icon
                     />
@@ -285,30 +297,56 @@
                   <h4
                     class="h4 hlprojects-item-title"
                     data-hlprojects-title
-                    data-translate="meetin-project-title"
+                    data-translate="claim-project-title"
                   >
-                    Aplikacja MEETin
+                    Model sztucznej inteligencji do klasyfikacji wypowiedzi
                   </h4>
                   <div
                     class="hlprojects-text"
                     data-hlprojects-text
-                    data-translate="meetin-project-description"
+                    data-translate="claim-project-description"
                   >
                     <p>
-                      <strong>MEETin</strong> to aplikacja mobilna na Android i
-                      iOS stworzona w <strong>React Native</strong>, która
-                      ułatwia znajdowanie miejsc spotkań z przyjaciółmi na
-                      podstawie preferencji użytkownika. Wykorzystuje
-                      <strong>Google Maps API</strong> do pobierania danych o
-                      miejscach, a także <strong>Firebase</strong> do obsługi
-                      bazy danych.
+                      W ramach projektu stworzony został model sztucznej
+                      inteligencji do <strong>binarnej klasyfikacji wypowiedzi</strong>
+                      w języku polskim - rozróżniania <strong>CLAIM</strong>
+                      (stwierdzeń wartych analizy fact-checkingowej) od
+                      <strong>NOT CLAIM</strong> (wypowiedzi, które nie są
+                      stwierdzeniami lub nie wymagają takiej weryfikacji).
                     </p>
                     <br />
                     <p>
-                      Aplikacja oferuje spersonalizowane wyszukiwanie miejsc z
-                      podziałem na kategorie i podkategorie, co pozwala na
-                      precyzyjne dopasowanie propozycji do zainteresowań
-                      użytkownika.
+                      Jako zbiór danych wykorzystano
+                      <strong>ClaimBuster</strong> (Fatma Arslan et al., Zenodo
+                      2020). Przetłumaczono 2 237 zdań z angielskiego na polski za
+                      pomocą <strong>DeepL API</strong>, a etykiety
+                      przekształcono na binarne. Dane podzielono na zbiór
+                      treningowy (80%) i testowy (20%) ze stratyfikacją.
+                    </p>
+                    <br />
+                    <p>
+                      Model bazowy to <strong>SmolLM-1.7B</strong>. Na warstwy
+                      uwagi nałożono adapter <strong>LoRA</strong>. Trening
+                      przeprowadzono przez 10 epok z użyciem klasy
+                      <strong>Trainer</strong> z Hugging Face Transformers;
+                      główną metryką ewaluacji był <strong>F1-score</strong>.
+                    </p>
+                    <br />
+                    <p>
+                      Do inferencji przygotowano skrypt <strong>infer.py</strong>
+                      - umożliwia klasyfikację pojedynczego zdania z linii
+                      poleceń lub uruchomienie na zestawie przykładowych zdań, z
+                      obsługą akceleracji GPU (CUDA / MPS). Pełny pipeline
+                      (pobieranie danych, tłumaczenie, trening, testowanie)
+                      opisano w notebooku <strong>projekt.ipynb</strong>.
+                    </p>
+                    <br />
+                    <p>
+                      W projekcie wykorzystano m.in. <strong>PyTorch</strong>,
+                      <strong>Hugging Face Transformers</strong>,
+                      <strong>PEFT</strong>, <strong>Datasets</strong>,
+                      <strong>scikit-learn</strong>, <strong>pandas</strong> i
+                      <strong>numpy</strong>.
                     </p>
                   </div>
                 </div>
@@ -356,7 +394,13 @@
                     loop
                     playsinline
                     controls
-                    style="width: 100%; border-radius: 12px; margin: 15px 0"
+                    style="
+                      width: auto;
+                      max-width: 100%;
+                      max-height: 420px;
+                      border-radius: 12px;
+                      margin: 15px 0;
+                    "
                   >
                     Your browser does not support the video tag.
                   </video>
@@ -387,31 +431,31 @@
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
                   <img
-                    src="./assets/images/technologies/python.png"
-                    alt="Python"
+                    src="./assets/images/technologies/huggingface.png"
+                    alt="Hugging Face Transformers"
                     style="border-radius: 12px"
                   />
-                  <span class="tech-tooltip">Python</span>
+                  <span class="tech-tooltip">Hugging Face Transformers</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
                   <img
-                    src="./assets/images/technologies/django.png"
-                    alt="Django"
+                    src="./assets/images/technologies/unsloth.png"
+                    alt="Unsloth"
                     style="border-radius: 12px"
                   />
-                  <span class="tech-tooltip">Django</span>
+                  <span class="tech-tooltip">Unsloth</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
                   <img
-                    src="./assets/images/technologies/fastapi.png"
-                    alt="FastAPI"
+                    src="./assets/images/technologies/ollama.png"
+                    alt="Ollama"
                     style="border-radius: 12px"
                   />
-                  <span class="tech-tooltip">FastAPI</span>
+                  <span class="tech-tooltip">Ollama</span>
                 </span>
               </li>
               <li class="technologies-item">
@@ -427,31 +471,31 @@
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
                   <img
+                    src="./assets/images/technologies/python.png"
+                    alt="Python"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">Python</span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/django.png"
+                    alt="Django"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">Django / DRF</span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
                     src="./assets/images/technologies/react.png"
                     alt="React"
                     style="border-radius: 12px"
                   />
                   <span class="tech-tooltip">React / React Native</span>
-                </span>
-              </li>
-              <li class="technologies-item">
-                <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/springboot.png"
-                    alt="Spring Boot"
-                    style="border-radius: 12px"
-                  />
-                  <span class="tech-tooltip">Spring Boot</span>
-                </span>
-              </li>
-              <li class="technologies-item">
-                <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/cpp.png"
-                    alt="C++"
-                    style="border-radius: 12px"
-                  />
-                  <span class="tech-tooltip">C++</span>
                 </span>
               </li>
               <li class="technologies-item">
@@ -467,11 +511,21 @@
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
                   <img
-                    src="./assets/images/technologies/opengl.png"
-                    alt="OpenGL"
+                    src="./assets/images/technologies/pandas.png"
+                    alt="Pandas"
                     style="border-radius: 12px"
                   />
-                  <span class="tech-tooltip">OpenGL</span>
+                  <span class="tech-tooltip">Pandas</span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/fabric.png"
+                    alt="Microsoft Fabric / Power BI"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">Microsoft Fabric / Power BI</span>
                 </span>
               </li>
               <li class="technologies-item">
@@ -482,6 +536,16 @@
                     style="border-radius: 12px"
                   />
                   <span class="tech-tooltip">Microsoft SQL Server</span>
+                </span>
+              </li>
+              <li class="technologies-item">
+                <span class="tech-tooltip-wrapper">
+                  <img
+                    src="./assets/images/technologies/m365.jpg"
+                    alt="Microsoft 365 / Office"
+                    style="border-radius: 12px"
+                  />
+                  <span class="tech-tooltip">Microsoft 365 / Office</span>
                 </span>
               </li>
               <li class="technologies-item">
@@ -512,36 +576,6 @@
                     style="border-radius: 12px"
                   />
                   <span class="tech-tooltip">Firebase</span>
-                </span>
-              </li>
-              <li class="technologies-item">
-                <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/jupyter.png"
-                    alt="Jupyter Notebook"
-                    style="border-radius: 12px"
-                  />
-                  <span class="tech-tooltip">Jupyter Notebook</span>
-                </span>
-              </li>
-              <li class="technologies-item">
-                <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/ubuntu.png"
-                    alt="Ubuntu"
-                    style="border-radius: 12px"
-                  />
-                  <span class="tech-tooltip">Ubuntu</span>
-                </span>
-              </li>
-              <li class="technologies-item">
-                <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/powershell.png"
-                    alt="PowerShell"
-                    style="border-radius: 12px"
-                  />
-                  <span class="tech-tooltip">PowerShell</span>
                 </span>
               </li>
             </ul>
@@ -638,6 +672,37 @@
                 data-filter-item
                 data-category="sztuczna inteligencja"
               >
+                <a href="https://github.com/vadtrex/Projekt-PJN" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/rap_classifier.png"
+                      alt="Klasyfikator autorstwa zwrotek rapowych"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3
+                    class="project-title"
+                    data-translate="project-rap-classifier-title"
+                  >
+                    Klasyfikator autorstwa zwrotek rapowych - NLP i LLM
+                  </h3>
+
+                  <p class="project-category" data-translate="filter-ai">
+                    Sztuczna inteligencja
+                  </p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="sztuczna inteligencja"
+              >
                 <a href="https://github.com/vadtrex/Projekt-UM" target="_blank">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
@@ -667,7 +732,7 @@
               <li
                 class="project-item active"
                 data-filter-item
-                data-category="informatyka"
+                data-category="sztuczna inteligencja"
               >
                 <a href="https://github.com/vadtrex/Projekt-FD" target="_blank">
                   <figure class="project-img">
@@ -689,8 +754,8 @@
                     Mikroserwis do transkrypcji nagrań i klasyfikacji wypowiedzi
                   </h3>
 
-                  <p class="project-category" data-translate="filter-cs">
-                    Informatyka
+                  <p class="project-category" data-translate="filter-ai">
+                    Sztuczna inteligencja
                   </p>
                 </a>
               </li>
