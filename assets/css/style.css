@@ -711,7 +711,7 @@ main {
 .hlprojects-list {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 15px;
   margin: 0 -15px;
   padding: 25px 15px;
@@ -725,6 +725,13 @@ main {
 .hlprojects-item {
   min-width: 100%;
   scroll-snap-align: center;
+  display: flex;
+}
+
+.hlprojects-item .content-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .hlprojects-icon-box {
@@ -751,6 +758,16 @@ main {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  flex: 1;
+  min-height: calc(4 * 1.6em);
+}
+
+.hlprojects-text--short {
+  display: block;
+  line-clamp: unset;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+  overflow: visible;
 }
 
 /**
@@ -765,7 +782,7 @@ main {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   overflow-y: auto;
   overscroll-behavior: contain;
   padding: 15px 12px;
@@ -807,7 +824,7 @@ main {
   background: var(--eerie-black-2);
   position: relative;
   padding: 15px;
-  margin: 0;
+  margin: auto;
   border: 1px solid var(--jet);
   border-radius: 14px;
   box-shadow: var(--shadow-5);
@@ -816,6 +833,8 @@ main {
   transition: var(--transition-1);
   z-index: 2;
   width: 100%;
+  max-height: calc(100dvh - 30px);
+  overflow: hidden;
 }
 
 .modal-container.active .hlprojects-modal {
@@ -929,6 +948,21 @@ main {
   margin-bottom: 15px;
 }
 
+.modal-video-container video {
+  width: auto;
+  max-width: 100%;
+  max-height: 620px;
+  border-radius: 12px;
+  margin: 15px 0;
+  display: block;
+}
+
+@media (min-width: 581px) {
+  .modal-video-container video {
+    max-height: min(620px, calc(100dvh - 220px));
+  }
+}
+
 @media (min-width: 481px) {
   .modal-container {
     padding: 24px 20px;
@@ -964,13 +998,12 @@ main {
 @media (max-width: 480px) {
   .modal-container {
     padding: 20px;
-    align-items: flex-start;
-    padding-top: 10px;
+    padding-top: 20px;
   }
 
   .hlprojects-modal {
-    max-height: 95vh;
-    margin: 0;
+    max-height: calc(100dvh - 40px);
+    margin: auto;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -997,12 +1030,12 @@ main {
   }
 
   .modal-video-container {
-    max-height: 50vh;
+    max-height: 65vh;
     overflow: hidden;
   }
 
   .modal-video-container video {
-    max-height: 50vh;
+    max-height: 65vh;
     width: 100%;
     object-fit: contain;
   }
@@ -1359,6 +1392,10 @@ main {
   opacity: 0;
   z-index: 1;
   transition: var(--transition-1);
+}
+
+.project-item > a:not([data-hlprojects-item]) .project-item-icon-box {
+  color: var(--white-1);
 }
 
 .project-item > a:hover .project-item-icon-box {
@@ -1861,6 +1898,15 @@ textarea.form-input::-webkit-resizer {
   .hlprojects-text {
     line-clamp: 2;
     -webkit-line-clamp: 2;
+    min-height: calc(2 * 1.6em);
+  }
+
+  .hlprojects-text--short {
+    line-clamp: unset;
+    -webkit-line-clamp: unset;
+    display: block;
+    -webkit-box-orient: unset;
+    overflow: visible;
   }
 
   /* hlprojects modal */

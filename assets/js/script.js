@@ -21,6 +21,7 @@ const translations = {
     "filter-math": "Matematyka",
     "filter-ai": "Sztuczna inteligencja",
     "select-category": "Wybierz kategorię",
+    "project-lm-chat-title": "LM Chat - lokalny czat z modelami LLM",
     "project-rap-classifier-title":
       "Klasyfikator autorstwa zwrotek rapowych - NLP i LLM",
     "project-claim-title":
@@ -48,6 +49,11 @@ const translations = {
       "Model sztucznej inteligencji do klasyfikacji wypowiedzi",
     "claim-project-description":
       "W ramach projektu stworzony został model sztucznej inteligencji do <strong>binarnej klasyfikacji wypowiedzi</strong> w języku polskim - rozróżniania <strong>CLAIM</strong> (stwierdzeń wartych analizy fact-checkingowej) od <strong>NOT CLAIM</strong> (wypowiedzi, które nie są stwierdzeniami lub nie wymagają takiej weryfikacji).<br /><br />Jako zbiór danych wykorzystano <strong>ClaimBuster</strong> (Fatma Arslan et al., Zenodo 2020). Przetłumaczono 2 237 zdań z angielskiego na polski za pomocą <strong>DeepL API</strong>, a etykiety przekształcono na binarne. Dane podzielono na zbiór treningowy (80%) i testowy (20%) ze stratyfikacją.<br /><br />Model bazowy to <strong>SmolLM-1.7B</strong>. Na warstwy uwagi nałożono adapter <strong>LoRA</strong>. Trening przeprowadzono przez 10 epok z użyciem klasy <strong>Trainer</strong> z Hugging Face Transformers; główną metryką ewaluacji był <strong>F1-score</strong>.<br /><br />Do inferencji przygotowano skrypt <strong>infer.py</strong> - umożliwia klasyfikację pojedynczego zdania z linii poleceń lub uruchomienie na zestawie przykładowych zdań, z obsługą akceleracji GPU (CUDA / MPS). Pełny pipeline (pobieranie danych, tłumaczenie, trening, testowanie) opisano w notebooku <strong>projekt.ipynb</strong>.<br /><br />W projekcie wykorzystano m.in. <strong>PyTorch</strong>, <strong>Hugging Face Transformers</strong>, <strong>PEFT</strong>, <strong>Datasets</strong>, <strong>scikit-learn</strong>, <strong>pandas</strong> i <strong>numpy</strong>.",
+    "lm-chat-project-title": "LM Chat - lokalny czat z modelami LLM",
+    "lm-chat-project-preview":
+      "W ramach projektu powstała wieloplatformowa aplikacja <strong>LM Chat</strong> we <strong>Flutterze</strong> do prowadzenia konwersacji z...",
+    "lm-chat-project-description":
+      "W ramach projektu powstała wieloplatformowa aplikacja <strong>LM Chat</strong> we <strong>Flutterze</strong> do prowadzenia konwersacji z dużymi modelami językowymi (<strong>LLM</strong>) działającymi w pełni lokalnie na urządzeniu użytkownika - bez połączenia z chmurą.<br /><br />Inferencja odbywa się dzięki bibliotece <strong>flutter_gemma</strong> (MediaPipe LLM Inference API) z akceleracją GPU. Aplikacja obsługuje <strong>6 modeli</strong> z rodzin Qwen i Gemma, w tym warianty multimodalne (tekst i obraz).<br /><br />Oferuje streamowane generowanie odpowiedzi, trwałą historię czatów w bazie <strong>Hive</strong>, pobieranie modeli z <strong>Hugging Face</strong> oraz responsywny interfejs na telefonach, tabletach i komputerach. Architektura projektu opiera się na <strong>Clean Architecture</strong> (warstwy domain, data, presentation).<br /><br />W projekcie wykorzystano m.in. <strong>Flutter</strong>, <strong>flutter_gemma</strong>, <strong>Riverpod</strong>, <strong>Hive</strong> i <strong>shared_preferences</strong>.",
     "date-jan-2025": "styczeń, 2025",
     "date-may-2024": "maj, 2024",
   },
@@ -70,6 +76,7 @@ const translations = {
     "filter-math": "Mathematics",
     "filter-ai": "Artificial Intelligence",
     "select-category": "Select category",
+    "project-lm-chat-title": "LM Chat - Local LLM Chat",
     "project-rap-classifier-title":
       "Rap Verse Authorship Classifier - NLP & LLM",
     "project-claim-title": "AI model for statement classification",
@@ -91,10 +98,15 @@ const translations = {
       "<strong>MEETin</strong> is a mobile application for Android and iOS created in <strong>React Native</strong> that makes it easier to find meeting places with friends based on user preferences. It uses <strong>Google Maps API</strong> to retrieve places data, as well as <strong>Firebase</strong> for database management.<br /><br />The application offers personalized places search divided into categories and subcategories, which allows for precise matching of suggestions to user interests.",
     "rap-project-title": "Rap Verse Authorship Classifier - NLP & LLM",
     "rap-project-description":
-      "As part of the project, language models were fine-tuned for rap verse authorship classification - recognizing one of 20 Polish rappers based on the text of a rap verse.<br /><br />The dataset was prepared from scratch: lyrics were collected from the <strong>Genius API</strong>, parsed into individual verses, and cleaned (~8k records, 20 classes). The data was split into training and test sets.<br /><br />Two base models - <strong>Qwen3.5-4B</strong> and <strong>Gemma-4-E2B</strong> - were fine-tuned with <strong>QLoRA</strong> (using <strong>Unsloth</strong> and <strong>Transformers</strong>) along with a classification head. The main evaluation metric was <strong>macro-F1</strong>; the best model achieved a value of about 0.63 and 64% accuracy.<br /><br />An inference script, <strong>classify.py</strong>, and notebooks documenting the full pipeline (data preparation, training, testing) were prepared. On top of the models, a <strong>“Rap Quiz”</strong> app (React + Vite) was built - a <strong>Human vs AI</strong> challenge where the user compares their score with predictions from both models.<br /><br />The project uses <strong>PyTorch</strong>, <strong>Hugging Face Transformers</strong>, <strong>PEFT</strong>, <strong>Unsloth</strong>, and <strong>scikit-learn</strong>, among others.",
+      "As part of the project, language models were fine-tuned for rap verse authorship classification - recognizing one of 20 Polish rappers based on the text of a rap verse.<br /><br />The dataset was prepared from scratch: lyrics were collected from the <strong>Genius API</strong>, parsed into individual verses, and cleaned (~8k records, 20 classes). The data was split into training and test sets.<br /><br />Two base models - <strong>Qwen3.5-4B</strong> and <strong>Gemma-4-E2B</strong> - were fine-tuned with <strong>QLoRA</strong> (using <strong>Unsloth</strong> and <strong>Transformers</strong>) along with a classification head. The main evaluation metric was <strong>macro-F1</strong>; the best model achieved a value of about 0.63 and 64% accuracy.<br /><br />An inference script, <strong>classify.py</strong>, and notebooks documenting the full pipeline (data preparation, training, testing) were prepared. On top of the models, a <strong>“Rap Quiz”</strong> app (React + Vite) was built - a <strong>Human vs AI</strong> challenge where the user compares their score with predictions from both models.<br /><br />The project uses <strong>PyTorch</strong>, <strong>Hugging Face Transformers</strong>, <strong>PEFT</strong>, <strong>Unsloth</strong>, and <strong>scikit-learn</strong>.",
     "claim-project-title": "AI model for statement classification",
     "claim-project-description":
-      "As part of the project, an artificial intelligence model was built for <strong>binary classification of Polish statements</strong> - distinguishing <strong>CLAIM</strong> (statements worth fact-checking) from <strong>NOT CLAIM</strong> (utterances that are not statements or do not require such verification).<br /><br />The <strong>ClaimBuster</strong> dataset was used (Fatma Arslan et al., Zenodo 2020). A total of 2,237 sentences were translated from English to Polish using the <strong>DeepL API</strong>, and labels were converted to binary form. The data was split into training (80%) and test (20%) sets with stratification.<br /><br />The base model is <strong>SmolLM-1.7B</strong>. A <strong>LoRA</strong> adapter was applied to attention layers. Training ran for 10 epochs using the Hugging Face <strong>Trainer</strong> class; the main evaluation metric was <strong>F1-score</strong>.<br /><br />An inference script, <strong>infer.py</strong>, was prepared - it classifies a single sentence from the command line or runs on a set of sample sentences, with GPU acceleration support (CUDA / MPS). The full pipeline (data collection, translation, training, testing) is documented in the <strong>projekt.ipynb</strong> notebook.<br /><br />The project uses <strong>PyTorch</strong>, <strong>Hugging Face Transformers</strong>, <strong>PEFT</strong>, <strong>Datasets</strong>, <strong>scikit-learn</strong>, <strong>pandas</strong>, and <strong>numpy</strong>, among others.",
+      "As part of the project, an artificial intelligence model was built for <strong>binary classification of Polish statements</strong> - distinguishing <strong>CLAIM</strong> (statements worth fact-checking) from <strong>NOT CLAIM</strong> (utterances that are not statements or do not require such verification).<br /><br />The <strong>ClaimBuster</strong> dataset was used (Fatma Arslan et al., Zenodo 2020). A total of 2,237 sentences were translated from English to Polish using the <strong>DeepL API</strong>, and labels were converted to binary form. The data was split into training (80%) and test (20%) sets with stratification.<br /><br />The base model is <strong>SmolLM-1.7B</strong>. A <strong>LoRA</strong> adapter was applied to attention layers. Training ran for 10 epochs using the Hugging Face <strong>Trainer</strong> class; the main evaluation metric was <strong>F1-score</strong>.<br /><br />An inference script, <strong>infer.py</strong>, was prepared - it classifies a single sentence from the command line or runs on a set of sample sentences, with GPU acceleration support (CUDA / MPS). The full pipeline (data collection, translation, training, testing) is documented in the <strong>projekt.ipynb</strong> notebook.<br /><br />The project uses <strong>PyTorch</strong>, <strong>Hugging Face Transformers</strong>, <strong>PEFT</strong>, <strong>Datasets</strong>, <strong>scikit-learn</strong>, <strong>pandas</strong>, and <strong>numpy</strong>.",
+    "lm-chat-project-title": "LM Chat - Local LLM Chat",
+    "lm-chat-project-preview":
+      "As part of the project, a cross-platform <strong>LM Chat</strong> application was built with <strong>Flutter</strong> for conversations with...",
+    "lm-chat-project-description":
+      "As part of the project, a cross-platform <strong>LM Chat</strong> application was built with <strong>Flutter</strong> for conversations with large language models (<strong>LLMs</strong>) running entirely on-device - with no cloud connection required.<br /><br />Inference is powered by <strong>flutter_gemma</strong> (MediaPipe LLM Inference API) with GPU acceleration. The app supports <strong>6 models</strong> from the Qwen and Gemma families, including multimodal variants (text and image).<br /><br />It offers streamed response generation, persistent chat history in a <strong>Hive</strong> database, model downloads from <strong>Hugging Face</strong>, and a responsive interface for phones, tablets, and desktops. The project follows <strong>Clean Architecture</strong> (domain, data, and presentation layers).<br /><br />The project uses <strong>Flutter</strong>, <strong>flutter_gemma</strong>, <strong>Riverpod</strong>, <strong>Hive</strong>, and <strong>shared_preferences</strong>.",
     "date-jan-2025": "January, 2025",
     "date-may-2024": "May, 2024",
     "date-jan-2026": "January, 2026",
@@ -189,7 +201,9 @@ const hlprojectsModalFunc = function () {
 
 // Add click event to all hlprojects items
 for (let i = 0; i < hlprojectsItems.length; i++) {
-  hlprojectsItems[i].addEventListener("click", function () {
+  hlprojectsItems[i].addEventListener("click", function (e) {
+    e.preventDefault();
+
     const modalImg = document.querySelector("[data-modal-img]");
     const modalTitle = document.querySelector("[data-modal-title]");
     const modalText = document.querySelector("[data-modal-text]");
@@ -198,8 +212,14 @@ for (let i = 0; i < hlprojectsItems.length; i++) {
     );
     const modalVideo = document.querySelector("[data-modal-video]");
 
-    modalImg.src = this.querySelector("[data-hlprojects-icon]").src;
-    modalImg.alt = this.querySelector("[data-hlprojects-icon]").alt;
+    const iconEl = this.querySelector("[data-hlprojects-icon]");
+    if (iconEl) {
+      modalImg.src = iconEl.src;
+      modalImg.alt = iconEl.alt;
+    } else {
+      modalImg.src = this.getAttribute("data-icon-src") || "";
+      modalImg.alt = this.getAttribute("data-icon-alt") || "";
+    }
     modalTitle.innerHTML = this.querySelector(
       "[data-hlprojects-title]",
     ).innerHTML;
