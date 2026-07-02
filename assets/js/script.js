@@ -10,7 +10,7 @@ const translations = {
     location: "Lokalizacja",
     "location-address": "Pobiedziska, Polska",
     "about-title": "O mnie",
-    "about-text":
+    "about-text": 
       "Pasjonat technologii ze specjalizacją w sztucznej inteligencji, łączący praktyczne doświadczenie w IT z solidnym zapleczem technicznym. Studiuję informatykę (spec. Sztuczna Inteligencja) na UAM w Poznaniu. Zajmowałem się w praktyce fine-tuningiem modeli językowych oraz uruchamianiem dużych modeli LLM lokalnie i w chmurze. <br /><br />Posiadam doświadczenie w programowaniu (Python, React, React Native), analizie danych (Power BI, Pandas, Microsoft Fabric) oraz pracy z chmurą (GCP, AWS, Firebase). <br /><br />Jestem osobą analityczną, samodzielną i szybko przyswajającą nowe technologie.",
     "featured-projects": "Wyróżnione projekty",
     "technologies-title": "Technologie wykorzystywane w projektach",
