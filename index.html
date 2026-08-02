@@ -1,181 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Damian Wojtyczko</title>
-
     <!--
     - favicon
   -->
-    <link
-      rel="shortcut icon"
-      href="./assets/images/logo.ico"
-      type="image/x-icon"
-    />
-
+    <link rel="shortcut icon"
+          href="./assets/images/logo.ico"
+          type="image/x-icon" />
     <!--
     - custom css link
   -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-
     <!--
     - google font link
   -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet" />
   </head>
-
   <body>
     <!--
     - #MAIN
-  -->
-
+-->
     <main>
       <!--
       - #SIDEBAR
-    -->
-
+-->
       <aside class="sidebar" data-sidebar>
         <div class="sidebar-info">
-          <figure class="avatar-box"></figure>
-
+          <figure class="avatar-box">
+          </figure>
           <div class="info-content">
             <h1 class="name" title="Damian Wojtyczko">
-              Damian<br />
+              Damian
+              <br />
               Wojtyczko
             </h1>
           </div>
-
           <button class="info_more-btn" data-sidebar-btn>
             <span data-translate="show-contacts">Pokaż dane kontaktowe</span>
-
             <ion-icon name="chevron-down"></ion-icon>
           </button>
         </div>
-
         <div class="sidebar-info_more">
           <div class="separator"></div>
-
           <ul class="contacts-list">
             <li class="contact-item">
               <div class="icon-box">
                 <ion-icon name="mail-outline"></ion-icon>
               </div>
-
               <div class="contact-info">
                 <p class="contact-title">Email</p>
-
-                <a
-                  href="mailto:damianwojtyczko@gmail.com"
-                  class="contact-link"
-                  title="damianwojtyczko@gmail.com"
-                  >damianwojtyczko@gmail.com</a
-                >
+                <a href="mailto:damianwojtyczko@gmail.com"
+                   class="contact-link"
+                   title="damianwojtyczko@gmail.com">damianwojtyczko@gmail.com</a>
               </div>
             </li>
-
             <li class="contact-item">
               <div class="icon-box">
                 <ion-icon name="location-outline"></ion-icon>
               </div>
-
               <div class="contact-info">
-                <p class="contact-title" data-translate="location">
-                  Lokalizacja
-                </p>
-
+                <p class="contact-title" data-translate="location">Lokalizacja</p>
                 <address data-translate="location-address">
                   Pobiedziska, Polska
                 </address>
               </div>
             </li>
           </ul>
-
           <div class="separator"></div>
-
           <ul class="social-list">
             <li class="social-item">
-              <a
-                href="https://github.com/vadtrex"
-                class="social-link"
-                target="_blank"
-              >
+              <a href="https://github.com/vadtrex" class="social-link" target="_blank">
                 <ion-icon name="logo-github"></ion-icon>
               </a>
             </li>
           </ul>
         </div>
       </aside>
-
       <!--
       - #main-content
-    -->
-
+-->
       <div class="main-content">
         <!--
         - #NAVBAR
-      -->
-
+-->
         <nav class="navbar">
           <ul class="navbar-list">
             <li class="navbar-item">
-              <button
-                class="navbar-link active"
-                data-nav-link
-                data-translate="nav-about"
-              >
-                O mnie
-              </button>
+              <button class="navbar-link active" data-nav-link data-translate="nav-about">O mnie</button>
             </li>
-
             <li class="navbar-item">
-              <button
-                class="navbar-link"
-                data-nav-link
-                data-translate="nav-projects"
-              >
-                Projekty
-              </button>
+              <button class="navbar-link" data-nav-link data-translate="nav-projects">Projekty</button>
             </li>
-
             <li class="navbar-item">
-              <button
-                class="navbar-link"
-                data-nav-link
-                data-translate="nav-articles"
-              >
-                Artykuły
-              </button>
+              <button class="navbar-link" data-nav-link data-translate="nav-articles">Artykuły</button>
             </li>
           </ul>
-
           <button class="theme-toggle-btn" data-theme-toggle>
             <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
             <ion-icon name="moon-outline" class="moon-icon"></ion-icon>
           </button>
-
           <button class="lang-toggle-btn" data-lang-toggle>
             <span class="lang-text">EN</span>
           </button>
         </nav>
-
         <!--
         - #ABOUT
-      -->
-
+-->
         <article class="about active" data-page="o mnie" data-page-en="about">
           <header>
-            <h2 class="h2 article-title" data-translate="about-title">
-              O mnie
-            </h2>
+            <h2 class="h2 article-title" data-translate="about-title">O mnie</h2>
           </header>
-
           <section class="about-text">
             <p data-translate="about-text">
               Pasjonat technologii ze specjalizacją w sztucznej inteligencji,
@@ -194,45 +135,86 @@
               technologie.
             </p>
           </section>
-
           <!--
           - hlprojects
-        -->
-
+-->
           <section class="hlprojects">
-            <h3 class="h3 hlprojects-title" data-translate="featured-projects">
-              Wyróżnione projekty
-            </h3>
-
+            <h3 class="h3 hlprojects-title" data-translate="featured-projects">Wyróżnione projekty</h3>
             <ul class="hlprojects-list has-scrollbar">
               <li class="hlprojects-item">
-                <div
-                  class="content-card"
-                  data-hlprojects-item
-                  data-video-url="./assets/videos/rap_quiz.mp4"
-                  data-github-url="https://github.com/vadtrex/Projekt-PJN"
-                >
+                <div class="content-card"
+                     data-hlprojects-item
+                     data-video-url="./assets/videos/factifai.mp4"
+                     data-project-url="https://factifai.app/">
                   <figure class="hlprojects-icon-box">
-                    <img
-                      src="./assets/images/rap_icon.png"
-                      alt="Klasyfikator autorstwa zwrotek rapowych"
-                      width="60"
-                      data-hlprojects-icon
-                    />
+                    <img src="./assets/images/factifai-icon.svg"
+                         alt="FactifAI - platforma AI do fact-checkingu"
+                         width="60"
+                         data-hlprojects-icon />
                   </figure>
-
-                  <h4
-                    class="h4 hlprojects-item-title"
-                    data-hlprojects-title
-                    data-translate="rap-project-title"
-                  >
-                    Klasyfikator autorstwa zwrotek rapowych - NLP i LLM
-                  </h4>
-                  <div
-                    class="hlprojects-text"
-                    data-hlprojects-text
-                    data-translate="rap-project-description"
-                  >
+                  <h4 class="h4 hlprojects-item-title"
+                      data-hlprojects-title
+                      data-translate="verifai-project-title">FactifAI - platforma AI do fact-checkingu</h4>
+                  <div class="hlprojects-text"
+                       data-hlprojects-text
+                       data-translate="verifai-project-description">
+                    <p>
+                      <strong>FactifAI</strong> to produkcyjna platforma SaaS stworzona w <strong>Django</strong>, służąca do automatycznego i wieloźródłowego fact-checkingu z wykorzystaniem zaawansowanych modeli językowych LLM.
+                      <br />
+                      <br />
+                      Użytkownik przesyła dowolne stwierdzenie z opcjonalnym kontekstem (autor wypowiedzi, data, lokalizacja, notatki). Aplikacja uruchamia w tle analizę AI połączoną z przeszukiwaniem sieci w czasie rzeczywistym (RAG) i generuje raport weryfikacyjny zawierający werdykt, zwięzłe uzasadnienie, zestawienie faktów, ograniczenia analizy oraz pełną listę zweryfikowanych i cytowanych źródeł.
+                      <br />
+                      <br />
+                      Platforma oferuje bezhasłowy model uwierzytelniania (jednorazowe kody OTP wysyłane na e-mail), system odnawialnych i płatnych kredytów, integrację z płatnościami online <strong>Stripe Checkout</strong> oraz generowanie pełnych raportów w formacie <strong>PDF</strong> (ReportLab).
+                      <br />
+                      <br />
+                      W projekcie wykorzystano m.in. <strong>Django (Python)</strong>, <strong>OpenAI / OpenRouter API</strong>, <strong>Stripe</strong>, <strong>Azure Container Apps / Azure Communication Services</strong>, <strong>ReportLab</strong>, <strong>PostgreSQL</strong>, <strong>Sentry</strong>, <strong>Google Analytics</strong>.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="hlprojects-item">
+                <div class="content-card"
+                     data-hlprojects-item
+                     data-video-url="./assets/videos/lm_chat.mp4"
+                     data-github-url="https://github.com/vadtrex/Projekt-LSM">
+                  <figure class="hlprojects-icon-box">
+                    <img src="./assets/images/lm_chat_icon.png"
+                         alt="LM Chat - lokalny czat z modelami LLM"
+                         width="60"
+                         data-hlprojects-icon />
+                  </figure>
+                  <h4 class="h4 hlprojects-item-title"
+                      data-hlprojects-title
+                      data-translate="lm-chat-project-title">LM Chat - lokalny czat z modelami LLM</h4>
+                  <div class="hlprojects-text hlprojects-text--short"
+                       data-translate="lm-chat-project-preview">
+                    W ramach projektu powstała wieloplatformowa aplikacja
+                    <strong>LM Chat</strong> we <strong>Flutterze</strong> do
+                    prowadzenia konwersacji z...
+                  </div>
+                  <div data-hlprojects-text
+                       data-translate="lm-chat-project-description"
+                       hidden></div>
+                </div>
+              </li>
+              <li class="hlprojects-item">
+                <div class="content-card"
+                     data-hlprojects-item
+                     data-video-url="./assets/videos/rap_quiz.mp4"
+                     data-github-url="https://github.com/vadtrex/Projekt-PJN">
+                  <figure class="hlprojects-icon-box">
+                    <img src="./assets/images/rap_icon.png"
+                         alt="Klasyfikator autorstwa zwrotek rapowych"
+                         width="60"
+                         data-hlprojects-icon />
+                  </figure>
+                  <h4 class="h4 hlprojects-item-title"
+                      data-hlprojects-title
+                      data-translate="rap-project-title">Klasyfikator autorstwa zwrotek rapowych - NLP i LLM</h4>
+                  <div class="hlprojects-text"
+                       data-hlprojects-text
+                       data-translate="rap-project-description">
                     <p>
                       W ramach projektu zostały dostrojone modele językowe do
                       zadania klasyfikacji autorstwa zwrotek rapowych, czyli
@@ -277,74 +259,23 @@
                   </div>
                 </div>
               </li>
-
               <li class="hlprojects-item">
-                <div
-                  class="content-card"
-                  data-hlprojects-item
-                  data-video-url="./assets/videos/lm_chat.mp4"
-                  data-github-url="https://github.com/vadtrex/Projekt-LSM"
-                >
+                <div class="content-card"
+                     data-hlprojects-item
+                     data-video-url=""
+                     data-github-url="https://github.com/vadtrex/Projekt-UM">
                   <figure class="hlprojects-icon-box">
-                    <img
-                      src="./assets/images/lm_chat_icon.png"
-                      alt="LM Chat - lokalny czat z modelami LLM"
-                      width="60"
-                      data-hlprojects-icon
-                    />
+                    <img src="./assets/images/claim_icon.png"
+                         alt="Model sztucznej inteligencji do klasyfikacji wypowiedzi"
+                         width="60"
+                         data-hlprojects-icon />
                   </figure>
-
-                  <h4
-                    class="h4 hlprojects-item-title"
-                    data-hlprojects-title
-                    data-translate="lm-chat-project-title"
-                  >
-                    LM Chat - lokalny czat z modelami LLM
-                  </h4>
-                  <div
-                    class="hlprojects-text hlprojects-text--short"
-                    data-translate="lm-chat-project-preview"
-                  >
-                    W ramach projektu powstała wieloplatformowa aplikacja
-                    <strong>LM Chat</strong> we <strong>Flutterze</strong> do
-                    prowadzenia konwersacji z...
-                  </div>
-                  <div
-                    data-hlprojects-text
-                    data-translate="lm-chat-project-description"
-                    hidden
-                  ></div>
-                </div>
-              </li>
-
-              <li class="hlprojects-item">
-                <div
-                  class="content-card"
-                  data-hlprojects-item
-                  data-video-url=""
-                  data-github-url="https://github.com/vadtrex/Projekt-UM"
-                >
-                  <figure class="hlprojects-icon-box">
-                    <img
-                      src="./assets/images/claim_icon.png"
-                      alt="Model sztucznej inteligencji do klasyfikacji wypowiedzi"
-                      width="60"
-                      data-hlprojects-icon
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 hlprojects-item-title"
-                    data-hlprojects-title
-                    data-translate="claim-project-title"
-                  >
-                    Model sztucznej inteligencji do klasyfikacji wypowiedzi
-                  </h4>
-                  <div
-                    class="hlprojects-text"
-                    data-hlprojects-text
-                    data-translate="claim-project-description"
-                  >
+                  <h4 class="h4 hlprojects-item-title"
+                      data-hlprojects-title
+                      data-translate="claim-project-title">Model sztucznej inteligencji do klasyfikacji wypowiedzi</h4>
+                  <div class="hlprojects-text"
+                       data-hlprojects-text
+                       data-translate="claim-project-description">
                     <p>
                       W ramach projektu stworzony został model sztucznej
                       inteligencji do <strong>binarnej klasyfikacji wypowiedzi</strong>
@@ -392,763 +323,485 @@
               </li>
             </ul>
           </section>
-
           <!--
           - technologies
-        -->
-
+-->
           <section class="technologies">
-            <h3
-              class="h3 technologies-title"
-              data-translate="technologies-title"
-            >
-              Technologie wykorzystywane w projektach
-            </h3>
-
+            <h3 class="h3 technologies-title" data-translate="technologies-title">Technologie wykorzystywane w projektach</h3>
             <ul class="technologies-list has-scrollbar">
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/huggingface.png"
-                    alt="Hugging Face Transformers"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/huggingface.png"
+                       alt="Hugging Face Transformers"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">Hugging Face Transformers</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/unsloth.png"
-                    alt="Unsloth"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/unsloth.png"
+                       alt="Unsloth"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">Unsloth</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/ollama.png"
-                    alt="Ollama"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/ollama.png"
+                       alt="Ollama"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">Ollama</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/pytorch.png"
-                    alt="PyTorch"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/pytorch.png"
+                       alt="PyTorch"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">PyTorch</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/python.png"
-                    alt="Python"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/python.png"
+                       alt="Python"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">Python</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/django.png"
-                    alt="Django"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/django.png"
+                       alt="Django"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">Django / DRF</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/react.png"
-                    alt="React"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/react.png"
+                       alt="React"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">React / React Native</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/flutter.png"
-                    alt="Flutter"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/flutter.png"
+                       alt="Flutter"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">Flutter</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/git.png"
-                    alt="Git"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/git.png"
+                       alt="Git"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">Git / GitHub</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/pandas.png"
-                    alt="Pandas"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/pandas.png"
+                       alt="Pandas"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">Pandas</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/fabric.png"
-                    alt="Microsoft Fabric / Power BI"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/fabric.png"
+                       alt="Microsoft Fabric / Power BI"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">Microsoft Fabric / Power BI</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/mssql.png"
-                    alt="Microsoft SQL Server"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/mssql.png"
+                       alt="Microsoft SQL Server"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">Microsoft SQL Server</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/m365.jpg"
-                    alt="Microsoft 365 / Office"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/m365.jpg"
+                       alt="Microsoft 365 / Office"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">Microsoft 365 / Office</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/aws.png"
-                    alt="Amazon Web Services"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/aws.png"
+                       alt="Amazon Web Services"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">Amazon Web Services</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/googlecloud.png"
-                    alt="Google Cloud"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/googlecloud.png"
+                       alt="Google Cloud"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">Google Cloud</span>
                 </span>
               </li>
               <li class="technologies-item">
                 <span class="tech-tooltip-wrapper">
-                  <img
-                    src="./assets/images/technologies/firebase.png"
-                    alt="Firebase"
-                    style="border-radius: 12px"
-                  />
+                  <img src="./assets/images/technologies/firebase.png"
+                       alt="Firebase"
+                       style="border-radius: 12px" />
                   <span class="tech-tooltip">Firebase</span>
                 </span>
               </li>
             </ul>
           </section>
         </article>
-
         <!--
         - #PORTFOLIO
-      -->
-
+-->
         <article class="portfolio" data-page="projekty" data-page-en="projects">
           <header>
-            <h2 class="h2 article-title" data-translate="projects-title">
-              Projekty
-            </h2>
+            <h2 class="h2 article-title" data-translate="projects-title">Projekty</h2>
           </header>
-
           <section class="projects">
             <ul class="filter-list">
               <li class="filter-item">
-                <button
-                  class="active"
-                  data-filter-btn
-                  data-translate="filter-all"
-                >
-                  Wszystkie
-                </button>
+                <button class="active" data-filter-btn data-translate="filter-all">Wszystkie</button>
               </li>
-
               <li class="filter-item">
-                <button data-filter-btn data-translate="filter-ai">
-                  Sztuczna inteligencja
-                </button>
+                <button data-filter-btn data-translate="filter-ai">Sztuczna inteligencja</button>
               </li>
-
               <li class="filter-item">
-                <button data-filter-btn data-translate="filter-cs">
-                  Informatyka
-                </button>
+                <button data-filter-btn data-translate="filter-cs">Informatyka</button>
               </li>
-
               <li class="filter-item">
-                <button data-filter-btn data-translate="filter-math">
-                  Matematyka
-                </button>
+                <button data-filter-btn data-translate="filter-math">Matematyka</button>
               </li>
             </ul>
-
             <div class="filter-select-box">
               <button class="filter-select" data-select>
-                <div
-                  class="select-value"
-                  data-selecct-value
-                  data-translate="select-category"
-                >
-                  Wybierz kategorię
-                </div>
-
+                <div class="select-value"
+                     data-selecct-value
+                     data-translate="select-category">Wybierz kategorię</div>
                 <div class="select-icon">
                   <ion-icon name="chevron-down"></ion-icon>
                 </div>
               </button>
-
               <ul class="select-list">
                 <li class="select-item">
-                  <button data-select-item data-translate="filter-all">
-                    Wszystkie
-                  </button>
+                  <button data-select-item data-translate="filter-all">Wszystkie</button>
                 </li>
-
                 <li class="select-item">
-                  <button data-select-item data-translate="filter-math">
-                    Matematyka
-                  </button>
+                  <button data-select-item data-translate="filter-math">Matematyka</button>
                 </li>
-
                 <li class="select-item">
-                  <button data-select-item data-translate="filter-cs">
-                    Informatyka
-                  </button>
+                  <button data-select-item data-translate="filter-cs">Informatyka</button>
                 </li>
-
                 <li class="select-item">
-                  <button data-select-item data-translate="filter-ai">
-                    Sztuczna inteligencja
-                  </button>
+                  <button data-select-item data-translate="filter-ai">Sztuczna inteligencja</button>
                 </li>
               </ul>
             </div>
-
             <ul class="project-list">
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="sztuczna inteligencja"
-              >
-                <a
-                  href="#"
-                  data-hlprojects-item
-                  data-github-url="https://github.com/vadtrex/Projekt-PJN"
-                  data-video-url="./assets/videos/rap_quiz.mp4"
-                  data-icon-src="./assets/images/rap_icon.png"
-                  data-icon-alt="Klasyfikator autorstwa zwrotek rapowych"
-                >
+              <li class="project-item active"
+                  data-filter-item
+                  data-category="sztuczna inteligencja">
+                <a href="#"
+                   data-hlprojects-item
+                   data-project-url="https://factifai.app/"
+                   data-video-url="./assets/videos/factifai.mp4"
+                   data-icon-src="./assets/images/factifai-icon.svg"
+                   data-icon-alt="FactifAI - platforma AI do fact-checkingu">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
                     </div>
-
-                    <img
-                      src="./assets/images/rap_classifier.png"
-                      alt="Klasyfikator autorstwa zwrotek rapowych"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/factifai.png"
+                         alt="FactifAI - platforma AI do fact-checkingu"
+                         loading="lazy" />
                   </figure>
-
-                  <h3
-                    class="project-title"
-                    data-hlprojects-title
-                    data-translate="rap-project-title"
-                  >
-                    Klasyfikator autorstwa zwrotek rapowych - NLP i LLM
-                  </h3>
-
-                  <div
-                    data-hlprojects-text
-                    data-translate="rap-project-description"
-                    hidden
-                  ></div>
-
-                  <p class="project-category" data-translate="filter-ai">
-                    Sztuczna inteligencja
-                  </p>
+                  <h3 class="project-title"
+                      data-hlprojects-title
+                      data-translate="verifai-project-title">FactifAI - platforma AI do fact-checkingu</h3>
+                  <div data-hlprojects-text
+                       data-translate="verifai-project-description"
+                       hidden></div>
+                  <p class="project-category" data-translate="filter-ai">Sztuczna inteligencja</p>
                 </a>
               </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="sztuczna inteligencja"
-              >
-                <a
-                  href="#"
-                  data-hlprojects-item
-                  data-github-url="https://github.com/vadtrex/Projekt-UM"
-                  data-video-url=""
-                  data-icon-src="./assets/images/claim_icon.png"
-                  data-icon-alt="Model sztucznej inteligencji do klasyfikacji wypowiedzi"
-                >
+              <li class="project-item active"
+                  data-filter-item
+                  data-category="sztuczna inteligencja">
+                <a href="#"
+                   data-hlprojects-item
+                   data-github-url="https://github.com/vadtrex/Projekt-PJN"
+                   data-video-url="./assets/videos/rap_quiz.mp4"
+                   data-icon-src="./assets/images/rap_icon.png"
+                   data-icon-alt="Klasyfikator autorstwa zwrotek rapowych">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
                     </div>
-
-                    <img
-                      src="./assets/images/claim_model.png"
-                      alt="Zrzut ekranu z aplikacji"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/rap_classifier.png"
+                         alt="Klasyfikator autorstwa zwrotek rapowych"
+                         loading="lazy" />
                   </figure>
-
-                  <h3
-                    class="project-title"
-                    data-hlprojects-title
-                    data-translate="claim-project-title"
-                  >
-                    Model sztucznej inteligencji do klasyfikacji wypowiedzi
-                  </h3>
-
-                  <div
-                    data-hlprojects-text
-                    data-translate="claim-project-description"
-                    hidden
-                  ></div>
-
-                  <p class="project-category" data-translate="filter-ai">
-                    Sztuczna inteligencja
-                  </p>
+                  <h3 class="project-title"
+                      data-hlprojects-title
+                      data-translate="rap-project-title">Klasyfikator autorstwa zwrotek rapowych - NLP i LLM</h3>
+                  <div data-hlprojects-text data-translate="rap-project-description" hidden></div>
+                  <p class="project-category" data-translate="filter-ai">Sztuczna inteligencja</p>
                 </a>
               </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="sztuczna inteligencja"
-              >
-                <a
-                  href="#"
-                  data-hlprojects-item
-                  data-github-url="https://github.com/vadtrex/Projekt-LSM"
-                  data-video-url="./assets/videos/lm_chat.mp4"
-                  data-icon-src="./assets/images/lm_chat_icon.png"
-                  data-icon-alt="LM Chat - lokalny czat z modelami LLM"
-                >
+              <li class="project-item active"
+                  data-filter-item
+                  data-category="sztuczna inteligencja">
+                <a href="#"
+                   data-hlprojects-item
+                   data-github-url="https://github.com/vadtrex/Projekt-UM"
+                   data-video-url=""
+                   data-icon-src="./assets/images/claim_icon.png"
+                   data-icon-alt="Model sztucznej inteligencji do klasyfikacji wypowiedzi">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
                     </div>
-
-                    <img
-                      src="./assets/images/lm_chat.png"
-                      alt="LM Chat - lokalny czat z modelami LLM"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/claim_model.png"
+                         alt="Zrzut ekranu z aplikacji"
+                         loading="lazy" />
                   </figure>
-
-                  <h3
-                    class="project-title"
-                    data-hlprojects-title
-                    data-translate="lm-chat-project-title"
-                  >
-                    LM Chat - lokalny czat z modelami LLM
-                  </h3>
-
-                  <div
-                    data-hlprojects-text
-                    data-translate="lm-chat-project-description"
-                    hidden
-                  ></div>
-
-                  <p class="project-category" data-translate="filter-ai">
-                    Sztuczna inteligencja
-                  </p>
+                  <h3 class="project-title"
+                      data-hlprojects-title
+                      data-translate="claim-project-title">Model sztucznej inteligencji do klasyfikacji wypowiedzi</h3>
+                  <div data-hlprojects-text
+                       data-translate="claim-project-description"
+                       hidden></div>
+                  <p class="project-category" data-translate="filter-ai">Sztuczna inteligencja</p>
                 </a>
               </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="sztuczna inteligencja"
-              >
+              <li class="project-item active"
+                  data-filter-item
+                  data-category="sztuczna inteligencja">
+                <a href="#"
+                   data-hlprojects-item
+                   data-github-url="https://github.com/vadtrex/Projekt-LSM"
+                   data-video-url="./assets/videos/lm_chat.mp4"
+                   data-icon-src="./assets/images/lm_chat_icon.png"
+                   data-icon-alt="LM Chat - lokalny czat z modelami LLM">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/lm_chat.png"
+                         alt="LM Chat - lokalny czat z modelami LLM"
+                         loading="lazy" />
+                  </figure>
+                  <h3 class="project-title"
+                      data-hlprojects-title
+                      data-translate="lm-chat-project-title">LM Chat - lokalny czat z modelami LLM</h3>
+                  <div data-hlprojects-text
+                       data-translate="lm-chat-project-description"
+                       hidden></div>
+                  <p class="project-category" data-translate="filter-ai">Sztuczna inteligencja</p>
+                </a>
+              </li>
+              <li class="project-item active"
+                  data-filter-item
+                  data-category="sztuczna inteligencja">
                 <a href="https://github.com/vadtrex/Projekt-FD" target="_blank">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="logo-github"></ion-icon>
                     </div>
-
-                    <img
-                      src="./assets/images/transcription_service.png"
-                      alt="Zrzut ekranu z aplikacji"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/transcription_service.png"
+                         alt="Zrzut ekranu z aplikacji"
+                         loading="lazy" />
                   </figure>
-
-                  <h3
-                    class="project-title"
-                    data-translate="project-transcription-title"
-                  >
+                  <h3 class="project-title" data-translate="project-transcription-title">
                     Mikroserwis do transkrypcji nagrań i klasyfikacji wypowiedzi
                   </h3>
-
-                  <p class="project-category" data-translate="filter-ai">
-                    Sztuczna inteligencja
-                  </p>
+                  <p class="project-category" data-translate="filter-ai">Sztuczna inteligencja</p>
                 </a>
               </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="informatyka"
-              >
-                <a
-                  href="#"
-                  data-hlprojects-item
-                  data-github-url="https://github.com/vadtrex/Projekt_GRK"
-                  data-video-url="./assets/videos/wiatry_swiata.mp4"
-                  data-icon-src="./assets/images/wiatry_swiata.png"
-                  data-icon-alt="Wiatry Świata"
-                >
+              <li class="project-item active"
+                  data-filter-item
+                  data-category="informatyka">
+                <a href="#"
+                   data-hlprojects-item
+                   data-github-url="https://github.com/vadtrex/Projekt_GRK"
+                   data-video-url="./assets/videos/wiatry_swiata.mp4"
+                   data-icon-src="./assets/images/wiatry_swiata.png"
+                   data-icon-alt="Wiatry Świata">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
                     </div>
-
-                    <img
-                      src="./assets/images/wind_app.png"
-                      alt="Zrzut ekranu z aplikacji"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/wind_app.png"
+                         alt="Zrzut ekranu z aplikacji"
+                         loading="lazy" />
                   </figure>
-
-                  <h3
-                    class="project-title"
-                    data-hlprojects-title
-                    data-translate="winds-project-title"
-                  >
-                    Wiatry Świata
-                  </h3>
-
-                  <div
-                    data-hlprojects-text
-                    data-translate="winds-project-description"
-                    hidden
-                  ></div>
-
-                  <p class="project-category" data-translate="filter-cs">
-                    Informatyka
-                  </p>
+                  <h3 class="project-title"
+                      data-hlprojects-title
+                      data-translate="winds-project-title">Wiatry Świata</h3>
+                  <div data-hlprojects-text
+                       data-translate="winds-project-description"
+                       hidden></div>
+                  <p class="project-category" data-translate="filter-cs">Informatyka</p>
                 </a>
               </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="informatyka"
-              >
-                <a
-                  href="#"
-                  data-hlprojects-item
-                  data-github-url=""
-                  data-video-url="./assets/videos/meetin.mp4"
-                  data-icon-src="./assets/images/meetin.png"
-                  data-icon-alt="Aplikacja MEETin"
-                >
+              <li class="project-item active"
+                  data-filter-item
+                  data-category="informatyka">
+                <a href="#"
+                   data-hlprojects-item
+                   data-github-url=""
+                   data-video-url="./assets/videos/meetin.mp4"
+                   data-icon-src="./assets/images/meetin.png"
+                   data-icon-alt="Aplikacja MEETin">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
                     </div>
-
-                    <img
-                      src="./assets/images/meetin_app.png"
-                      alt="Zrzut ekranu z aplikacji"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/meetin_app.png"
+                         alt="Zrzut ekranu z aplikacji"
+                         loading="lazy" />
                   </figure>
-
-                  <h3
-                    class="project-title"
-                    data-hlprojects-title
-                    data-translate="meetin-project-title"
-                  >
-                    Aplikacja MEETin
-                  </h3>
-
-                  <div
-                    data-hlprojects-text
-                    data-translate="meetin-project-description"
-                    hidden
-                  ></div>
-
-                  <p class="project-category" data-translate="filter-cs">
-                    Informatyka
-                  </p>
+                  <h3 class="project-title"
+                      data-hlprojects-title
+                      data-translate="meetin-project-title">Aplikacja MEETin</h3>
+                  <div data-hlprojects-text
+                       data-translate="meetin-project-description"
+                       hidden></div>
+                  <p class="project-category" data-translate="filter-cs">Informatyka</p>
                 </a>
               </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="informatyka"
-              >
-                <a
-                  href="https://github.com/vadtrex/smartphones-db"
-                  target="_blank"
-                >
+              <li class="project-item active"
+                  data-filter-item
+                  data-category="informatyka">
+                <a href="https://github.com/vadtrex/smartphones-db" target="_blank">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="logo-github"></ion-icon>
                     </div>
-
-                    <img
-                      src="./assets/images/smartphones_app.png"
-                      alt="Zrzut ekranu z aplikacji"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/smartphones_app.png"
+                         alt="Zrzut ekranu z aplikacji"
+                         loading="lazy" />
                   </figure>
-
-                  <h3
-                    class="project-title"
-                    data-translate="project-smartphones-title"
-                  >
-                    Baza danych smartfonów
-                  </h3>
-
-                  <p class="project-category" data-translate="filter-cs">
-                    Informatyka
-                  </p>
+                  <h3 class="project-title" data-translate="project-smartphones-title">Baza danych smartfonów</h3>
+                  <p class="project-category" data-translate="filter-cs">Informatyka</p>
                 </a>
               </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="informatyka"
-              >
+              <li class="project-item active"
+                  data-filter-item
+                  data-category="informatyka">
                 <a href="https://github.com/vadtrex/microshell" target="_blank">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="logo-github"></ion-icon>
                     </div>
-
-                    <img
-                      src="./assets/images/microshell.png"
-                      alt="Zrzut ekranu z aplikacji"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/microshell.png"
+                         alt="Zrzut ekranu z aplikacji"
+                         loading="lazy" />
                   </figure>
-
-                  <h3
-                    class="project-title"
-                    data-translate="project-microshell-title"
-                  >
-                    MicroShell
-                  </h3>
-
-                  <p class="project-category" data-translate="filter-cs">
-                    Informatyka
-                  </p>
+                  <h3 class="project-title" data-translate="project-microshell-title">MicroShell</h3>
+                  <p class="project-category" data-translate="filter-cs">Informatyka</p>
                 </a>
               </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="applications"
-              >
+              <li class="project-item active"
+                  data-filter-item
+                  data-category="applications">
                 <a href="https://github.com/vadtrex/meteo-app" target="_blank">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="logo-github"></ion-icon>
                     </div>
-
-                    <img
-                      src="./assets/images/meteo_app.png"
-                      alt="Zrzut ekranu z aplikacji"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/meteo_app.png"
+                         alt="Zrzut ekranu z aplikacji"
+                         loading="lazy" />
                   </figure>
-
-                  <h3
-                    class="project-title"
-                    data-translate="project-weather-title"
-                  >
-                    Aplikacja pogodowa w Bash i PowerShell
-                  </h3>
-
-                  <p class="project-category" data-translate="filter-cs">
-                    Informatyka
-                  </p>
+                  <h3 class="project-title" data-translate="project-weather-title">Aplikacja pogodowa w Bash i PowerShell</h3>
+                  <p class="project-category" data-translate="filter-cs">Informatyka</p>
                 </a>
               </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="matematyka"
-              >
-                <a
-                  href="https://github.com/vadtrex/cubic-spline"
-                  target="_blank"
-                >
+              <li class="project-item active"
+                  data-filter-item
+                  data-category="matematyka">
+                <a href="https://github.com/vadtrex/cubic-spline" target="_blank">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="logo-github"></ion-icon>
                     </div>
-
-                    <img
-                      src="./assets/images/cubic_spline.png"
-                      alt="Zrzut ekranu z Jupyter Notebook"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/cubic_spline.png"
+                         alt="Zrzut ekranu z Jupyter Notebook"
+                         loading="lazy" />
                   </figure>
-
-                  <h3
-                    class="project-title"
-                    data-translate="project-cubic-spline-title"
-                  >
-                    Interpolacją funkcją sklejaną
-                  </h3>
-
-                  <p class="project-category" data-translate="filter-math">
-                    Matematyka
-                  </p>
+                  <h3 class="project-title" data-translate="project-cubic-spline-title">Interpolacją funkcją sklejaną</h3>
+                  <p class="project-category" data-translate="filter-math">Matematyka</p>
                 </a>
               </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="matematyka"
-              >
-                <a
-                  href="https://github.com/vadtrex/mandelbrot-set"
-                  target="_blank"
-                >
+              <li class="project-item active"
+                  data-filter-item
+                  data-category="matematyka">
+                <a href="https://github.com/vadtrex/mandelbrot-set" target="_blank">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="logo-github"></ion-icon>
                     </div>
-
-                    <img
-                      src="./assets/images/mandelbrot.png"
-                      alt="Zrzut ekranu z Jupyter Notebook"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/mandelbrot.png"
+                         alt="Zrzut ekranu z Jupyter Notebook"
+                         loading="lazy" />
                   </figure>
-
-                  <h3
-                    class="project-title"
-                    data-translate="project-mandelbrot-title"
-                  >
-                    Zbiór Mandelbrota
-                  </h3>
-
-                  <p class="project-category" data-translate="filter-math">
-                    Matematyka
-                  </p>
+                  <h3 class="project-title" data-translate="project-mandelbrot-title">Zbiór Mandelbrota</h3>
+                  <p class="project-category" data-translate="filter-math">Matematyka</p>
                 </a>
               </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="informatyka"
-              >
+              <li class="project-item active"
+                  data-filter-item
+                  data-category="informatyka">
                 <a href="https://github.com/vadtrex/quiz-game" target="_blank">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="logo-github"></ion-icon>
                     </div>
-
-                    <img
-                      src="./assets/images/quiz_game.png"
-                      alt="Zrzut ekranu z aplikacji"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/quiz_game.png"
+                         alt="Zrzut ekranu z aplikacji"
+                         loading="lazy" />
                   </figure>
-
-                  <h3 class="project-title" data-translate="project-quiz-title">
-                    Quiz Sieciowy
-                  </h3>
-
-                  <p class="project-category" data-translate="filter-cs">
-                    informatyka
-                  </p>
+                  <h3 class="project-title" data-translate="project-quiz-title">Quiz Sieciowy</h3>
+                  <p class="project-category" data-translate="filter-cs">informatyka</p>
                 </a>
               </li>
             </ul>
           </section>
         </article>
-
         <!--
         - #ARTICLES
-      -->
-
+-->
         <article class="blog" data-page="artykuły" data-page-en="articles">
           <header>
-            <h2 class="h2 article-title" data-translate="articles-title">
-              Artykuły
-            </h2>
+            <h2 class="h2 article-title" data-translate="articles-title">Artykuły</h2>
           </header>
-
           <section class="blog-posts">
             <ul class="blog-posts-list">
               <li class="blog-post-item">
-                <a
-                  href="assets/articles/Opracowanie projektu modelu sztucznej inteligencji do klasyfikacji wypowiedzi.pdf"
-                  target="_blank"
-                >
+                <a href="assets/articles/Opracowanie projektu modelu sztucznej inteligencji do klasyfikacji wypowiedzi.pdf"
+                   target="_blank">
                   <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/claim_article.png"
-                      alt="Model sztucznej inteligencji do klasyfikacji wypowiedzi"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/claim_article.png"
+                         alt="Model sztucznej inteligencji do klasyfikacji wypowiedzi"
+                         loading="lazy" />
                   </figure>
-
                   <div class="blog-content">
                     <div class="blog-meta">
-                      <p class="blog-category" data-translate="filter-cs">
-                        Informatyka
-                      </p>
-
+                      <p class="blog-category" data-translate="filter-cs">Informatyka</p>
                       <span class="dot"></span>
-
-                      <time datetime="2026-01-01" data-translate="date-jan-2026"
-                        >styczeń, 2026</time
-                      >
+                      <time datetime="2026-01-01" data-translate="date-jan-2026">styczeń, 2026</time>
                     </div>
-
-                    <h3 class="h3 blog-item-title">
-                      Model sztucznej inteligencji do klasyfikacji wypowiedzi
-                    </h3>
-
+                    <h3 class="h3 blog-item-title">Model sztucznej inteligencji do klasyfikacji wypowiedzi</h3>
                     <p class="blog-text">
                       Celem projektu jest stworzenie modelu sztucznej
                       inteligencji do binarnej klasyfikacji wypowiedzi na:
@@ -1162,35 +815,20 @@
                   </div>
                 </a>
               </li>
-
               <li class="blog-post-item">
-                <a
-                  href="assets/articles/Algorytm Canny'ego.pdf"
-                  target="_blank"
-                >
+                <a href="assets/articles/Algorytm Canny'ego.pdf" target="_blank">
                   <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/canny.png"
-                      alt="Algorytm Canny'ego"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/canny.png"
+                         alt="Algorytm Canny'ego"
+                         loading="lazy" />
                   </figure>
-
                   <div class="blog-content">
                     <div class="blog-meta">
-                      <p class="blog-category" data-translate="filter-math">
-                        Matematyka
-                      </p>
-
+                      <p class="blog-category" data-translate="filter-math">Matematyka</p>
                       <span class="dot"></span>
-
-                      <time datetime="2025-01-01" data-translate="date-jan-2025"
-                        >styczeń, 2025</time
-                      >
+                      <time datetime="2025-01-01" data-translate="date-jan-2025">styczeń, 2025</time>
                     </div>
-
                     <h3 class="h3 blog-item-title">Algorytm Canny'ego</h3>
-
                     <p class="blog-text">
                       Operatory Sobela i Prewitta to matematyczne operatory
                       różniczkowe, które są powszechnie stosowane w algorytmach
@@ -1201,37 +839,21 @@
                   </div>
                 </a>
               </li>
-
               <li class="blog-post-item">
-                <a
-                  href="./assets/articles/Wygładzanie siatek modeli 3D.pdf"
-                  target="_blank"
-                >
+                <a href="./assets/articles/Wygładzanie siatek modeli 3D.pdf"
+                   target="_blank">
                   <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/mesh_smoothing.png"
-                      alt="Wygładzanie siatek modeli 3D"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/mesh_smoothing.png"
+                         alt="Wygładzanie siatek modeli 3D"
+                         loading="lazy" />
                   </figure>
-
                   <div class="blog-content">
                     <div class="blog-meta">
-                      <p class="blog-category" data-translate="filter-math">
-                        Matematyka
-                      </p>
-
+                      <p class="blog-category" data-translate="filter-math">Matematyka</p>
                       <span class="dot"></span>
-
-                      <time datetime="2025-01-01" data-translate="date-jan-2025"
-                        >styczeń, 2025</time
-                      >
+                      <time datetime="2025-01-01" data-translate="date-jan-2025">styczeń, 2025</time>
                     </div>
-
-                    <h3 class="h3 blog-item-title">
-                      Wygładzanie siatek modeli 3D
-                    </h3>
-
+                    <h3 class="h3 blog-item-title">Wygładzanie siatek modeli 3D</h3>
                     <p class="blog-text">
                       Wygładzanie siatek 3D to istotny krok w przetwarzaniu
                       modeli przestrzennych, szczególnie cenny w przypadku
@@ -1242,37 +864,21 @@
                   </div>
                 </a>
               </li>
-
               <li class="blog-post-item">
-                <a
-                  href="./assets/articles/Test Pierwszości Millera-Rabina.pdf"
-                  target="_blank"
-                >
+                <a href="./assets/articles/Test Pierwszości Millera-Rabina.pdf"
+                   target="_blank">
                   <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/millerrabin.png"
-                      alt="Test Pierwszości Millera-Rabina"
-                      loading="lazy"
-                    />
+                    <img src="./assets/images/millerrabin.png"
+                         alt="Test Pierwszości Millera-Rabina"
+                         loading="lazy" />
                   </figure>
-
                   <div class="blog-content">
                     <div class="blog-meta">
-                      <p class="blog-category" data-translate="filter-math">
-                        Matematyka
-                      </p>
-
+                      <p class="blog-category" data-translate="filter-math">Matematyka</p>
                       <span class="dot"></span>
-
-                      <time datetime="2024-05-01" data-translate="date-may-2024"
-                        >maj, 2024</time
-                      >
+                      <time datetime="2024-05-01" data-translate="date-may-2024">maj, 2024</time>
                     </div>
-
-                    <h3 class="h3 blog-item-title">
-                      Test Pierwszości Millera-Rabina
-                    </h3>
-
+                    <h3 class="h3 blog-item-title">Test Pierwszości Millera-Rabina</h3>
                     <p class="blog-text">
                       Test Millera-Rabina to probabilistyczny test pierwszości,
                       który sprawdza czy dana liczba jest liczbą pierwszą.
@@ -1288,55 +894,46 @@
           </section>
         </article>
       </div>
-
       <!--
       - hlprojects modal
-    -->
-
+-->
       <div class="modal-container" data-modal-container>
         <div class="overlay" data-overlay></div>
-
         <section class="hlprojects-modal">
           <button class="modal-close-btn" data-modal-close-btn>
             <ion-icon name="close-outline"></ion-icon>
           </button>
-
           <div class="modal-img-wrapper">
             <figure class="modal-avatar-box">
-              <img
-                src="./assets/images/meetin.png"
-                alt="Zdjęcie aplikacji"
-                width="80"
-                data-modal-img
-              />
+              <img src="./assets/images/meetin.png"
+                   alt="Zdjęcie aplikacji"
+                   width="80"
+                   data-modal-img />
             </figure>
           </div>
-
           <div class="modal-content">
             <h4 class="h3 modal-title" data-modal-title>Nazwa Projektu</h4>
-
             <div data-modal-text>
               <p>Opis projektu</p>
             </div>
-            <div
-              class="modal-video-container"
-              data-modal-video-container
-              style="display: none"
-            >
-              <video
-                data-modal-video
-                autoplay
-                muted
-                loop
-                playsinline
-                controls
-              >
+            <div class="modal-video-container"
+                 data-modal-video-container
+                 style="display: none">
+              <video data-modal-video autoplay muted loop playsinline controls>
                 Your browser does not support the video tag.
               </video>
             </div>
           </div>
-
           <div class="modal-action-buttons">
+            <a href="#"
+               class="modal-btn project-btn"
+               data-project-link
+               style="display: none"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Otwórz projekt">
+              <ion-icon name="open-outline"></ion-icon>
+            </a>
             <a href="#" class="modal-btn github-btn" data-github-link>
               <ion-icon name="logo-github"></ion-icon>
             </a>
@@ -1348,14 +945,9 @@
     - custom js link
   -->
     <script src="./assets/js/script.js"></script>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+    <script type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

@@ -10,7 +10,7 @@ const translations = {
     location: "Lokalizacja",
     "location-address": "Pobiedziska, Polska",
     "about-title": "O mnie",
-    "about-text": 
+    "about-text":
       "Pasjonat technologii ze specjalizacją w sztucznej inteligencji, łączący praktyczne doświadczenie w IT z solidnym zapleczem technicznym. Studiuję informatykę (spec. Sztuczna Inteligencja) na UAM w Poznaniu. Zajmowałem się w praktyce fine-tuningiem modeli językowych oraz uruchamianiem dużych modeli LLM lokalnie i w chmurze. <br /><br />Posiadam doświadczenie w programowaniu (Python, React, React Native), analizie danych (Power BI, Pandas, Microsoft Fabric) oraz pracy z chmurą (GCP, AWS, Firebase). <br /><br />Jestem osobą analityczną, samodzielną i szybko przyswajającą nowe technologie.",
     "featured-projects": "Wyróżnione projekty",
     "technologies-title": "Technologie wykorzystywane w projektach",
@@ -21,6 +21,9 @@ const translations = {
     "filter-math": "Matematyka",
     "filter-ai": "Sztuczna inteligencja",
     "select-category": "Wybierz kategorię",
+    "verifai-project-title": "FactifAI - platforma AI do fact-checkingu",
+    "verifai-project-description":
+      "<strong>FactifAI</strong> to produkcyjna platforma SaaS stworzona w <strong>Django</strong>, służąca do automatycznego i wieloźródłowego fact-checkingu z wykorzystaniem zaawansowanych modeli językowych LLM.<br /><br />Użytkownik przesyła dowolne stwierdzenie z opcjonalnym kontekstem (autor wypowiedzi, data, lokalizacja, notatki). Aplikacja uruchamia w tle analizę AI połączoną z przeszukiwaniem sieci w czasie rzeczywistym (RAG) i generuje raport weryfikacyjny zawierający werdykt, zwięzłe uzasadnienie, zestawienie faktów, ograniczenia analizy oraz pełną listę zweryfikowanych i cytowanych źródeł.<br /><br />Platforma oferuje bezhasłowy model uwierzytelniania (jednorazowe kody OTP wysyłane na e-mail), system odnawialnych i płatnych kredytów, integrację z płatnościami online <strong>Stripe Checkout</strong> oraz generowanie pełnych raportów w formacie <strong>PDF</strong> (ReportLab).<br /><br />W projekcie wykorzystano m.in. <strong>Django (Python)</strong>, <strong>OpenAI / OpenRouter API</strong>, <strong>Stripe</strong>, <strong>Azure Container Apps / Azure Communication Services</strong>, <strong>ReportLab</strong>, <strong>PostgreSQL</strong>, <strong>Sentry</strong>, <strong>Google Analytics</strong>.",
     "project-lm-chat-title": "LM Chat - lokalny czat z modelami LLM",
     "project-rap-classifier-title":
       "Klasyfikator autorstwa zwrotek rapowych - NLP i LLM",
@@ -76,6 +79,9 @@ const translations = {
     "filter-math": "Mathematics",
     "filter-ai": "Artificial Intelligence",
     "select-category": "Select category",
+    "verifai-project-title": "FactifAI - AI-powered fact-checking platform",
+    "verifai-project-description":
+      "<strong>FactifAI</strong> is a production SaaS platform built with <strong>Django</strong>, designed for automated, multi-source fact-checking using advanced Large Language Models (LLMs).<br /><br />Users submit any statement along with optional context (spokesperson, date, location, notes). The application runs background AI analysis combined with real-time web search (RAG) and generates a verification report featuring a verdict, concise justification, key facts, limitations, and a full list of verified cited sources.<br /><br />The platform offers a passwordless authentication model (one-time email OTP verification), a credit system with free and paid tiers, online payment integration via <strong>Stripe Checkout</strong>, and full <strong>PDF report generation</strong> (ReportLab).<br /><br />Technologies used include <strong>Django (Python)</strong>, <strong>OpenAI / OpenRouter API</strong>, <strong>Stripe</strong>, <strong>Azure Container Apps / Azure Communication Services</strong>, <strong>ReportLab</strong>, <strong>PostgreSQL</strong>, <strong>Sentry</strong>, and <strong>Google Analytics</strong>.",
     "project-lm-chat-title": "LM Chat - Local LLM Chat",
     "project-rap-classifier-title":
       "Rap Verse Authorship Classifier - NLP & LLM",
@@ -189,6 +195,7 @@ const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
 
 // Modal buttons
+const projectBtn = document.querySelector("[data-project-link]");
 const githubBtn = document.querySelector("[data-github-link]");
 
 const hlprojectsModalFunc = function () {
@@ -227,8 +234,9 @@ for (let i = 0; i < hlprojectsItems.length; i++) {
       "[data-hlprojects-text]",
     ).innerHTML;
 
-    // Get video and github URLs
+    // Get video, project, and github URLs
     const videoUrl = this.getAttribute("data-video-url");
+    const projectUrl = this.getAttribute("data-project-url");
     const githubUrl = this.getAttribute("data-github-url");
 
     // Handle video display in modal and load video only when clicked
@@ -240,13 +248,27 @@ for (let i = 0; i < hlprojectsItems.length; i++) {
       modalVideoContainer.style.display = "none";
     }
 
+    // Handle the live project button
+    if (projectUrl && projectUrl.trim() !== "") {
+      projectBtn.href = projectUrl;
+      projectBtn.style.display = "flex";
+      projectBtn.target = "_blank";
+      projectBtn.rel = "noopener noreferrer";
+      projectBtn.style.right = githubUrl && githubUrl.trim() !== "" ? "100px" : "60px";
+    } else {
+      projectBtn.style.display = "none";
+      projectBtn.href = "#";
+    }
+
     // Handle github button
     if (githubUrl && githubUrl.trim() !== "") {
       githubBtn.href = githubUrl;
       githubBtn.style.display = "flex";
       githubBtn.target = "_blank";
+      githubBtn.rel = "noopener noreferrer";
     } else {
       githubBtn.style.display = "none";
+      githubBtn.href = "#";
     }
 
     hlprojectsModalFunc();
@@ -266,11 +288,15 @@ overlay.addEventListener("click", function () {
   hlprojectsModalFunc();
 });
 
-// Add click event to github button
+// Prevent empty modal links from navigating
+projectBtn.addEventListener("click", function (e) {
+  if (!this.href || this.href.endsWith("#")) {
+    e.preventDefault();
+  }
+});
+
 githubBtn.addEventListener("click", function (e) {
-  if (this.href && this.href !== "#") {
-    // Link will open in new tab
-  } else {
+  if (!this.href || this.href.endsWith("#")) {
     e.preventDefault();
   }
 });

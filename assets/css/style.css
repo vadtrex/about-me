@@ -742,6 +742,11 @@ main {
   background: var(--bg-gradient-onyx);
   border-radius: 14px;
   box-shadow: var(--shadow-1);
+  overflow: hidden;
+}
+
+.hlprojects-icon-box img {
+  border-radius: inherit;
 }
 
 .hlprojects-item-title {
@@ -883,10 +888,10 @@ main {
   opacity: 0.7;
 }
 
+.project-btn,
 .github-btn {
   position: absolute;
   top: 15px;
-  right: 60px;
   background: var(--onyx);
   border-radius: 8px;
   width: 32px;
@@ -897,6 +902,14 @@ main {
   color: var(--white-2);
   font-size: 18px;
   opacity: 0.7;
+}
+
+.project-btn {
+  right: 100px;
+}
+
+.github-btn {
+  right: 60px;
 }
 
 .modal-btn:hover,
@@ -914,6 +927,11 @@ main {
   border-radius: 14px;
   margin-bottom: 15px;
   box-shadow: var(--shadow-2);
+  overflow: hidden;
+}
+
+.modal-avatar-box img {
+  border-radius: inherit;
 }
 
 .modal-img-wrapper > img {
